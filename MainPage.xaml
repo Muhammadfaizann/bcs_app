@@ -89,8 +89,8 @@
                 <!--row 1 col 0-->
                 <Grid Grid.Column="0"
                       Grid.Row="1"
-                      BackgroundColor="{StaticResource Gray200}"
-                      ColumnDefinitions="170,120,100"
+                      BackgroundColor="{StaticResource Gray200}"    
+                      ColumnDefinitions="170,120,100"                 
                       RowDefinitions="*,*,*,*,*,*,*,*"
                       ColumnSpacing="20"
                       Padding="8">
