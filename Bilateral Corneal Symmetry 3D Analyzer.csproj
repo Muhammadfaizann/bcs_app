@@ -58,6 +58,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\ae_img_3.png" />
+	  <None Remove="Resources\Images\ae_left_img.png" />
+	  <None Remove="Resources\Images\ae_right_img.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="IronPython" Version="3.4.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="python" Version="3.11.2" />
