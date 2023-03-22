@@ -55,20 +55,58 @@
             <Setter Property="Spacing" Value="10" />
         </Style>
 
+        <Style x:Key="Stylenamehere" TargetType="Element">
+            <Setter Property="Shell.BackgroundColor" Value="#FFF2F2F2" />
+            <Setter Property="Shell.TitleColor" Value="Black" />
+        </Style>
+
     </ContentPage.Resources>
+
+    <!--<ContentPage.MenuBarItems>
+        <MenuBarItem Text="File">
+            <MenuFlyoutItem Text="Exit"
+                            Command="{Binding ExitCommand}" />
+        </MenuBarItem>
+        <MenuBarItem Text="Locations">
+            <MenuFlyoutSubItem Text="Change Location">
+                <MenuFlyoutItem Text="Redmond, USA"
+                                Command="{Binding ChangeLocationCommand}"
+                                CommandParameter="Redmond" />
+                <MenuFlyoutItem Text="London, UK"
+                                Command="{Binding ChangeLocationCommand}"
+                                CommandParameter="London" />
+                <MenuFlyoutItem Text="Berlin, DE"
+                                Command="{Binding ChangeLocationCommand}"
+                                CommandParameter="Berlin"/>
+            </MenuFlyoutSubItem>
+            <MenuFlyoutSeparator />
+            <MenuFlyoutItem Text="Add Location"
+                            Command="{Binding AddLocationCommand}" />
+            <MenuFlyoutItem Text="Edit Location"
+                            Command="{Binding EditLocationCommand}" />
+            <MenuFlyoutItem Text="Remove Location"
+                            Command="{Binding RemoveLocationCommand}" />
+        </MenuBarItem>
+        <MenuBarItem Text="View">
+            <MenuFlyoutItem Text="Refresh"
+                            Command="{Binding RefreshCommand}" />
+            <MenuFlyoutItem Text="Change Theme"
+                            Command="{Binding ChangeThemeCommand}" />
+        </MenuBarItem>
+    </ContentPage.MenuBarItems>-->
 
     <ScrollView>
         <Grid RowDefinitions="*" 
-              Padding="4"
+              Padding="2"
               ColumnDefinitions="1.6*, *"
               ColumnSpacing="4"
               BackgroundColor="{StaticResource Gray500}">
             <!--left column-->
             <Grid Grid.Column="0"
-                  RowDefinitions="386, 250, 118"
+                  RowDefinitions="364, 214, 100"
                   ColumnDefinitions="*, *"
                   ColumnSpacing="4"
-                  RowSpacing="4">
+                  RowSpacing="2">
                 <!--row 0 col 0-->
                 <Frame Grid.Column="0"
                        CornerRadius="0"
@@ -94,7 +132,7 @@
                       ColumnDefinitions="170,120,100"                 
                       RowDefinitions="*,*,*,*,*,*,*,*"
                       ColumnSpacing="20"
-                      Padding="8">
+                      Padding="6,2">
 
                     <HorizontalStackLayout Grid.Row="0"
                                            Spacing="10"
@@ -232,7 +270,7 @@
                       ColumnDefinitions="170,120,00"
                       RowDefinitions="*,*,*,*,*,*,*,*"
                       ColumnSpacing="20"
-                      Padding="8">
+                      Padding="6,2">
                     <HorizontalStackLayout Grid.Row="0"
                                            Spacing="10"
                                            VerticalOptions="Center">
@@ -368,7 +406,7 @@
                       BackgroundColor="{StaticResource Gray200}"
                       Padding="0">
 
-                    <VerticalStackLayout Padding="8">
+                    <VerticalStackLayout Padding="6,2">
 
                         <Label Text="Exam 1 - Exam 2"
                                    FontAttributes="Bold"
@@ -377,7 +415,7 @@
                         <Grid 
                           VerticalOptions="Center"
                           ColumnDefinitions="*, *"
-                          Margin="0, 3"
+                          Margin="0,2"
                           ColumnSpacing="10">
 
                             <Grid Grid.Column="0" ColumnDefinitions="*,*">
@@ -393,7 +431,7 @@
                                 </VerticalStackLayout>
 
                                 <VerticalStackLayout Grid.Column="1"
-                                             Spacing="4">
+                                             Spacing="2">
                                     <HorizontalStackLayout Spacing="10">
                                         <Label Text="Pachy min X:" WidthRequest="80"/>
                                         <Entry  IsReadOnly="True"  x:Name="PachyMinx"/>
@@ -411,7 +449,7 @@
 
                             <Grid Grid.Column="1" ColumnDefinitions="*,*">
                                 <VerticalStackLayout Grid.Column="0"
-                                             Spacing="4">
+                                             Spacing="2">
                                     <HorizontalStackLayout>
                                         <Label Text="Rh:"/>
                                         <Entry  IsReadOnly="True"  x:Name="RhTextbox"/>
@@ -423,7 +461,7 @@
                                 </VerticalStackLayout>
 
                                 <VerticalStackLayout Grid.Column="1" 
-                                             Spacing="4">
+                                             Spacing="2">
                                     <HorizontalStackLayout Spacing="10">
                                         <Label Text="Axis:" WidthRequest="50"/>
                                         <Entry  IsReadOnly="True"  x:Name="axisTextbox"/>
@@ -447,7 +485,7 @@
 
             <!--right grid-->
             <Grid Grid.Column="1"
-                  RowDefinitions="20, 414, 242"
+                  RowDefinitions="20, 414, 244"
                   ColumnSpacing="4"
                   RowSpacing="2"
                   ColumnDefinitions="*, 140">
