@@ -61,13 +61,13 @@
         <Grid RowDefinitions="*" 
               Padding="4"
               ColumnDefinitions="1.6*, *"
-              ColumnSpacing="6"
+              ColumnSpacing="4"
               BackgroundColor="{StaticResource Gray500}">
             <!--left column-->
             <Grid Grid.Column="0"
                   RowDefinitions="386, 250, 118"
                   ColumnDefinitions="*, *"
-                  ColumnSpacing="8"
+                  ColumnSpacing="4"
                   RowSpacing="4">
                 <!--row 0 col 0-->
                 <Frame Grid.Column="0"
@@ -105,19 +105,6 @@
                                  Style="{StaticResource smallBtn}"
                                     Background="{StaticResource Gray200}"></Button>
 
-                        <!--<Border Stroke="Gray"
-                            StrokeThickness="2"
-                            StrokeShape="Rectangle"
-                            WidthRequest="80"
-                            HeightRequest="25"
-                            HorizontalOptions="Start"
-                            VerticalOptions="Start"
-                            Background="{StaticResource Gray200}">
-                            <Label Text="Exam 1"
-                               FontAttributes="Bold"
-                               HorizontalTextAlignment="Center"/>
-                        </Border>-->
-
                         <Label Text="Eye:" />
                         <Entry  IsReadOnly="True"  />
                     </HorizontalStackLayout>
@@ -126,11 +113,11 @@
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="First Name:" Style="{StaticResource lblSmall}"/>
-                            <Entry  IsReadOnly="True"  WidthRequest="170" />
+                            <Entry  IsReadOnly="True"  WidthRequest="180" />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
-                            <Label Text="Exam Date:" />
+                            <Label Text="Exam Date:" WidthRequest="60" />
                             <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
@@ -140,7 +127,7 @@
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Last Name:"  Style="{StaticResource lblSmall}"/>
-                            <Entry  IsReadOnly="True"  WidthRequest="170" />
+                            <Entry  IsReadOnly="True"  WidthRequest="180" />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
@@ -158,7 +145,7 @@
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
-                            <Label Text="D:" WidthRequest="20" />
+                            <Label Text="D:" WidthRequest="30" />
                             <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
@@ -172,7 +159,7 @@
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
-                            <Label Text="Rh:" WidthRequest="20" />
+                            <Label Text="Rh:" WidthRequest="30" />
                             <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
@@ -191,7 +178,7 @@
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
-                            <Label Text="Rv:" WidthRequest="20" />
+                            <Label Text="Rv:" WidthRequest="30" />
                             <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
@@ -210,12 +197,12 @@
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
-                            <Label Text="Axis:" WidthRequest="24" />
+                            <Label Text="Axis:" WidthRequest="30" />
                             <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
-                            <Label Text="KKS:" WidthRequest="56" />
+                            <Label Text="KKS:" WidthRequest="60" />
                             <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
@@ -229,7 +216,7 @@
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
-                            <Label Text="Astg:" />
+                            <Label Text="Astg:" WidthRequest="30" />
                             <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
@@ -263,11 +250,11 @@
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="First Name:" Style="{StaticResource lblSmall}"/>
-                            <Entry  IsReadOnly="True"  WidthRequest="170" />
+                            <Entry  IsReadOnly="True"  WidthRequest="180" />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
-                            <Label Text="Exam Date:" />
+                            <Label Text="Exam Date:" WidthRequest="60" />
                             <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
@@ -277,7 +264,7 @@
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Last Name:"  Style="{StaticResource lblSmall}"/>
-                            <Entry  IsReadOnly="True"  WidthRequest="170" />
+                            <Entry  IsReadOnly="True"  WidthRequest="180" />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
@@ -295,7 +282,7 @@
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
-                            <Label Text="D:" WidthRequest="20" />
+                            <Label Text="D:" WidthRequest="30" />
                             <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
@@ -309,7 +296,7 @@
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
-                            <Label Text="Rh:" WidthRequest="20" />
+                            <Label Text="Rh:" WidthRequest="30" />
                             <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
@@ -328,7 +315,7 @@
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
-                            <Label Text="Rv:" WidthRequest="20" />
+                            <Label Text="Rv:" WidthRequest="30" />
                             <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
@@ -347,12 +334,12 @@
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
-                            <Label Text="Axis:" WidthRequest="24" />
+                            <Label Text="Axis:" WidthRequest="30" />
                             <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
-                            <Label Text="KKS:" WidthRequest="56" />
+                            <Label Text="KKS:" WidthRequest="60" />
                             <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
@@ -366,7 +353,7 @@
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
-                            <Label Text="Astg:" />
+                            <Label Text="Astg:" WidthRequest="30" />
                             <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
@@ -407,15 +394,15 @@
 
                                 <VerticalStackLayout Grid.Column="1"
                                              Spacing="4">
-                                    <HorizontalStackLayout Spacing="25">
-                                        <Label Text="Pachy min X:" WidthRequest="70"/>
+                                    <HorizontalStackLayout Spacing="10">
+                                        <Label Text="Pachy min X:" WidthRequest="80"/>
                                         <Entry  IsReadOnly="True"  x:Name="PachyMinx"/>
                                     </HorizontalStackLayout>
-                                    <HorizontalStackLayout Spacing="25">
-                                        <Label Text="Pachy min Y:" WidthRequest="70"/>
+                                    <HorizontalStackLayout Spacing="10">
+                                        <Label Text="Pachy min Y:" WidthRequest="80"/>
                                         <Entry  IsReadOnly="True"  x:Name="PachyMinY"/>
                                     </HorizontalStackLayout>
-                                    <HorizontalStackLayout>
+                                    <HorizontalStackLayout Spacing="10">
                                         <Label Text="Pachy min dist:" WidthRequest="80"/>
                                         <Entry  IsReadOnly="True"  x:Name="PachyMinDist"/>
                                     </HorizontalStackLayout>
@@ -437,16 +424,16 @@
 
                                 <VerticalStackLayout Grid.Column="1" 
                                              Spacing="4">
-                                    <HorizontalStackLayout Spacing="32">
-                                        <Label Text="Axis:"/>
+                                    <HorizontalStackLayout Spacing="10">
+                                        <Label Text="Axis:" WidthRequest="50"/>
                                         <Entry  IsReadOnly="True"  x:Name="axisTextbox"/>
                                     </HorizontalStackLayout>
-                                    <HorizontalStackLayout  Spacing="32">
-                                        <Label Text="Astg:"/>
+                                    <HorizontalStackLayout  Spacing="10">
+                                        <Label Text="Astg:" WidthRequest="50"/>
                                         <Entry  IsReadOnly="True"  x:Name="astgTextBox"/>
                                     </HorizontalStackLayout>
-                                    <HorizontalStackLayout>
-                                        <Label Text="Max. dia:"/>
+                                    <HorizontalStackLayout Spacing="10">
+                                        <Label Text="Max. dia:" WidthRequest="50"/>
                                         <Entry  IsReadOnly="True"  x:Name="MaxDiaTextbox"/>
                                     </HorizontalStackLayout>
                                 </VerticalStackLayout>
@@ -461,7 +448,7 @@
             <!--right grid-->
             <Grid Grid.Column="1"
                   RowDefinitions="30, 460, 260"
-                  ColumnSpacing="8"
+                  ColumnSpacing="4"
                   RowSpacing="6"
                   ColumnDefinitions="*, 140">
                 <!--row 0-->
@@ -524,24 +511,53 @@
                           BackgroundColor="{StaticResource Gray200}"
                           Padding="0">
 
-                        <VerticalStackLayout Padding="4"
+                        <VerticalStackLayout Padding="6,4"
                                                  Spacing="4" >
                             <Label Text="Registration"
                                FontAttributes="Bold"/>
 
-                            <HorizontalStackLayout HorizontalOptions="Center"
-                                                       Spacing="10">
+                            <HorizontalStackLayout Spacing="2" HorizontalOptions="Center">
                                 <Label Text="VBS:" WidthRequest="60"/>
 
-                                <Entry Style="{StaticResource EntrySmallBox}"/>
+
+                                <Picker x:Name="picker" Background="white"
+                                        Margin="8,0,0,0"
+                                        FontSize="10"
+                                        SelectedItem="1"
+                                        HeightRequest="24" MinimumHeightRequest="24"  
+                                        WidthRequest="56" MinimumWidthRequest="56">
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:String}">
+                                            <x:String>1</x:String>
+                                            <x:String>2</x:String>
+                                            <x:String>3</x:String>
+                                            <x:String>4</x:String>
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+                                </Picker>
                                 
+                                <!--<Entry Style="{StaticResource EntrySmallBox}"/>-->
+
                             </HorizontalStackLayout>
                             <HorizontalStackLayout HorizontalOptions="Center"
                                                        Spacing="10">
                                 <Label Text="Zone:" WidthRequest="60"/>
 
 
-                                <Entry Style="{StaticResource EntrySmallBox}"/>
+                                <Picker Background="white"
+                                        FontSize="10"
+                                        SelectedItem="1"
+                                        HeightRequest="24" MinimumHeightRequest="24"  
+                                        WidthRequest="56" MinimumWidthRequest="56">
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:String}">
+                                            <x:String>1</x:String>
+                                            <x:String>2</x:String>
+                                            <x:String>3</x:String>
+                                            <x:String>4</x:String>
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+                                </Picker>
 
                             </HorizontalStackLayout>
 
@@ -553,41 +569,118 @@
                                                        Spacing="10">
                                 <Label Text="X Axis: " WidthRequest="60"
                                    VerticalOptions="Center"/>
-                                <Entry x:Name="xAxisTextbox"
-                                            Style="{StaticResource EntrySmallBox}"/>
+
+                                <Picker Background="white"
+                                        FontSize="10"
+                                        SelectedItem="1"
+                                        HeightRequest="24" MinimumHeightRequest="24"  
+                                        WidthRequest="56" MinimumWidthRequest="56">
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:String}">
+                                            <x:String>1</x:String>
+                                            <x:String>2</x:String>
+                                            <x:String>3</x:String>
+                                            <x:String>4</x:String>
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+                                </Picker>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout HorizontalOptions="Center"
                                                        Spacing="10">
                                 <Label Text="Y Axis: " WidthRequest="60"/>
-                                <Entry x:Name="yAxisTextbox"
-                                            Style="{StaticResource EntrySmallBox}"
-                                   x:DataType="x:Int32"/>
+
+                                <Picker Background="white"
+                                        FontSize="10"
+                                        SelectedItem="1"
+                                        HeightRequest="24" MinimumHeightRequest="24"  
+                                        WidthRequest="56" MinimumWidthRequest="56">
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:String}">
+                                            <x:String>1</x:String>
+                                            <x:String>2</x:String>
+                                            <x:String>3</x:String>
+                                            <x:String>4</x:String>
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+                                </Picker>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout HorizontalOptions="Center"
                                                        Spacing="10">
                                 <Label Text="Z Axis: " WidthRequest="60" />
-                                <Entry x:Name="zAxisTextbox"
-                                            Style="{StaticResource EntrySmallBox}"/>
+
+                                <Picker Background="white"
+                                        FontSize="10"
+                                        SelectedItem="1"
+                                        HeightRequest="24" MinimumHeightRequest="24"  
+                                        WidthRequest="56" MinimumWidthRequest="56">
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:String}">
+                                            <x:String>1</x:String>
+                                            <x:String>2</x:String>
+                                            <x:String>3</x:String>
+                                            <x:String>4</x:String>
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+                                </Picker>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout HorizontalOptions="Center"
                                                        Spacing="10">
                                 <Label Text="Rotate: " WidthRequest="60" />
-                                <Entry x:Name="rotateTextbox"
-                                            Style="{StaticResource EntrySmallBox}"
-                                   x:DataType="x:Int32"/>
+
+                                <Picker Background="white"
+                                        FontSize="10"
+                                        SelectedItem="1"
+                                        HeightRequest="24" MinimumHeightRequest="24"  
+                                        WidthRequest="56" MinimumWidthRequest="56">
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:String}">
+                                            <x:String>1</x:String>
+                                            <x:String>2</x:String>
+                                            <x:String>3</x:String>
+                                            <x:String>4</x:String>
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+                                </Picker>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout HorizontalOptions="Center"
                                                        Spacing="10">
                                 <Label Text="Tilt Axis:" WidthRequest="60"  />
-                                <Entry x:Name="tiltTextbox"
-                                            Style="{StaticResource EntrySmallBox}"/>
+
+                                <Picker Background="white"
+                                        FontSize="10"
+                                        SelectedItem="1"
+                                        HeightRequest="24" MinimumHeightRequest="24"  
+                                        WidthRequest="56" MinimumWidthRequest="56">
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:String}">
+                                            <x:String>1</x:String>
+                                            <x:String>2</x:String>
+                                            <x:String>3</x:String>
+                                            <x:String>4</x:String>
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+                                </Picker>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout HorizontalOptions="Center"
                                                        Spacing="10">
                                 <Label Text="Tilt degree: " WidthRequest="60"  />
-                                <Entry x:Name="tiltDegreeTextbox"
-                                            Style="{StaticResource EntrySmallBox}"
-                                   x:DataType="x:Int32"/>
+
+
+                                <Picker Background="white"
+                                        FontSize="10"
+                                        SelectedItem="1"
+                                        HeightRequest="24" MinimumHeightRequest="24"  
+                                        WidthRequest="56" MinimumWidthRequest="56">
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:String}">
+                                            <x:String>1</x:String>
+                                            <x:String>2</x:String>
+                                            <x:String>3</x:String>
+                                            <x:String>4</x:String>
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+                                </Picker>
+
                             </HorizontalStackLayout>
                         </VerticalStackLayout>
 
@@ -707,29 +800,29 @@
                                    FontAttributes="Bold"
                                    VerticalTextAlignment="Start"/>
 
-                        <VerticalStackLayout Margin="0,2" Spacing="6">
+                        <VerticalStackLayout Margin="0,2" Spacing="0">
 
-                            <HorizontalStackLayout>
+                            <HorizontalStackLayout Spacing="6">
                                 <VerticalStackLayout Spacing="4">
 
                                     <VerticalStackLayout>
                                         <Label Text="3 nm Zone" HorizontalTextAlignment="End"/>
-                                        <HorizontalStackLayout Spacing="6">
-                                            <Label Text="Avg:"/>
+                                        <HorizontalStackLayout Spacing="4">
+                                            <Label Text="Avg:" WidthRequest="25"/>
                                             <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                         </HorizontalStackLayout>
                                     </VerticalStackLayout>
 
                                     <VerticalStackLayout Spacing="0">
-                                        <HorizontalStackLayout Spacing="6">
-                                            <Label Text="Min:" HorizontalTextAlignment="End"/>
+                                        <HorizontalStackLayout Spacing="4">
+                                            <Label Text="Min:" WidthRequest="25"/>
                                             <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                         </HorizontalStackLayout>
                                     </VerticalStackLayout>
 
                                     <VerticalStackLayout Spacing="0">
-                                        <HorizontalStackLayout Spacing="6">
-                                            <Label Text="Max:" HorizontalTextAlignment="End"/>
+                                        <HorizontalStackLayout Spacing="4">
+                                            <Label Text="Max:" WidthRequest="25"/>
                                             <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                         </HorizontalStackLayout>
                                     </VerticalStackLayout>
@@ -740,25 +833,21 @@
 
                                     <VerticalStackLayout>
                                         <Label Text="6 nm Zone" HorizontalTextAlignment="End"/>
-                                        <HorizontalStackLayout Spacing="6">
-                                            <Label Text="Avg:"/>
+                                        <HorizontalStackLayout Spacing="2">
+                                            <Label Text="Avg:" WidthRequest="26"/>
                                             <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                         </HorizontalStackLayout>
                                     </VerticalStackLayout>
 
-                                    <VerticalStackLayout Spacing="0">
-                                        <HorizontalStackLayout Spacing="6">
-                                            <Label Text="Min:" HorizontalTextAlignment="End"/>
-                                            <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
-                                        </HorizontalStackLayout>
-                                    </VerticalStackLayout>
+                                    <HorizontalStackLayout Spacing="2">
+                                        <Label Text="Min:" WidthRequest="26"/>
+                                        <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
+                                    </HorizontalStackLayout>
 
-                                    <VerticalStackLayout Spacing="0">
-                                        <HorizontalStackLayout Spacing="6">
-                                            <Label Text="Max:" HorizontalTextAlignment="End"/>
-                                            <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
-                                        </HorizontalStackLayout>
-                                    </VerticalStackLayout>
+                                    <HorizontalStackLayout Spacing="2">
+                                        <Label Text="Max:" WidthRequest="26"/>
+                                        <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
+                                    </HorizontalStackLayout>
 
                                 </VerticalStackLayout>
 
@@ -841,17 +930,17 @@
                             </HorizontalStackLayout>
                             <HorizontalStackLayout Spacing="6"
                                                        HorizontalOptions="Center">
-                                <Label Text="2mm Avg:" />
+                                <Label Text="2mm Avg:" WidthRequest="56" />
                                 <Entry  IsReadOnly="True"  WidthRequest="60" />
                             </HorizontalStackLayout>
                             <HorizontalStackLayout Spacing="6"
                                                        HorizontalOptions="Center">
-                                <Label Text="2mm max:" />
+                                <Label Text="2mm max:" WidthRequest="56" />
                                 <Entry  IsReadOnly="True"  WidthRequest="60" />
                             </HorizontalStackLayout>
                             <HorizontalStackLayout Spacing="6"
                                                        HorizontalOptions="Center">
-                                <Label Text="2mm min:" />
+                                <Label Text="2mm min:" WidthRequest="56" />
                                 <Entry  IsReadOnly="True"  WidthRequest="60" />
                             </HorizontalStackLayout>
                         </VerticalStackLayout>
