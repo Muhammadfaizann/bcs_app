@@ -529,7 +529,7 @@
                                FontAttributes="Bold"/>
 
                             <HorizontalStackLayout Spacing="2" HorizontalOptions="Center">
-                                <Label Text="VBS:" WidthRequest="60"/>
+                                <Label Text="VBS:" WidthRequest="52"/>
 
 
                                 <Picker x:Name="picker" Background="white"
@@ -537,7 +537,7 @@
                                         FontSize="9"
                                         SelectedItem="1"
                                         HeightRequest="22" MinimumHeightRequest="22"
-                                        WidthRequest="56" MinimumWidthRequest="56">
+                                        WidthRequest="64" MinimumWidthRequest="64">
                                     <Picker.ItemsSource>
                                         <x:Array Type="{x:Type x:String}">
                                             <x:String>1</x:String>
@@ -552,15 +552,15 @@
 
                             </HorizontalStackLayout>
                             <HorizontalStackLayout HorizontalOptions="Center"
-                                                       Spacing="10">
-                                <Label Text="Zone:" WidthRequest="60"/>
+                                                       Spacing="4">
+                                <Label Text="Zone:" WidthRequest="58"/>
 
 
                                 <Picker Background="white"
                                         FontSize="9"
                                         SelectedItem="1"
                                         HeightRequest="22" MinimumHeightRequest="22" 
-                                        WidthRequest="56" MinimumWidthRequest="56">
+                                        WidthRequest="64" MinimumWidthRequest="64">
                                     <Picker.ItemsSource>
                                         <x:Array Type="{x:Type x:String}">
                                             <x:String>1</x:String>
@@ -578,15 +578,15 @@
                             <Label Text="Adjustments"
                                FontAttributes="Bold"/>
                             <HorizontalStackLayout HorizontalOptions="Center"
-                                                       Spacing="10">
-                                <Label Text="X Axis: " WidthRequest="60"
+                                                       Spacing="4">
+                                <Label Text="X Axis: " WidthRequest="58"
                                    VerticalOptions="Center"/>
 
                                 <Picker Background="white"
                                         FontSize="9"
                                         SelectedItem="1"
                                         HeightRequest="22" MinimumHeightRequest="22"  
-                                        WidthRequest="56" MinimumWidthRequest="56">
+                                        WidthRequest="64" MinimumWidthRequest="64">
                                     <Picker.ItemsSource>
                                         <x:Array Type="{x:Type x:String}">
                                             <x:String>1</x:String>
@@ -598,14 +598,14 @@
                                 </Picker>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout HorizontalOptions="Center"
-                                                       Spacing="10">
-                                <Label Text="Y Axis: " WidthRequest="60"/>
+                                                       Spacing="4">
+                                <Label Text="Y Axis: " WidthRequest="58"/>
 
                                 <Picker Background="white"
                                         FontSize="9"
                                         SelectedItem="1"
                                         HeightRequest="22" MinimumHeightRequest="22"
-                                        WidthRequest="56" MinimumWidthRequest="56">
+                                        WidthRequest="64" MinimumWidthRequest="64">
                                     <Picker.ItemsSource>
                                         <x:Array Type="{x:Type x:String}">
                                             <x:String>1</x:String>
@@ -617,14 +617,14 @@
                                 </Picker>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout HorizontalOptions="Center"
-                                                       Spacing="10">
-                                <Label Text="Z Axis: " WidthRequest="60" />
+                                                       Spacing="4">
+                                <Label Text="Z Axis: " WidthRequest="58" />
 
                                 <Picker Background="white"
                                         FontSize="9"
                                         SelectedItem="1"
                                         HeightRequest="22" MinimumHeightRequest="22"
-                                        WidthRequest="56" MinimumWidthRequest="56">
+                                        WidthRequest="64" MinimumWidthRequest="64">
                                     <Picker.ItemsSource>
                                         <x:Array Type="{x:Type x:String}">
                                             <x:String>1</x:String>
@@ -636,14 +636,14 @@
                                 </Picker>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout HorizontalOptions="Center"
-                                                       Spacing="10">
-                                <Label Text="Rotate: " WidthRequest="60" />
+                                                       Spacing="4">
+                                <Label Text="Rotate: " WidthRequest="58" />
 
                                 <Picker Background="white"
                                         FontSize="9"
                                         SelectedItem="1"
                                         HeightRequest="22" MinimumHeightRequest="22"  
-                                        WidthRequest="56" MinimumWidthRequest="56">
+                                        WidthRequest="64" MinimumWidthRequest="64">
                                     <Picker.ItemsSource>
                                         <x:Array Type="{x:Type x:String}">
                                             <x:String>1</x:String>
@@ -655,14 +655,14 @@
                                 </Picker>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout HorizontalOptions="Center"
-                                                       Spacing="10">
-                                <Label Text="Tilt Axis:" WidthRequest="60"  />
+                                                       Spacing="4">
+                                <Label Text="Tilt Axis:" WidthRequest="58"  />
 
                                 <Picker Background="white"
                                         FontSize="9"
                                         SelectedItem="1"
                                         HeightRequest="22" MinimumHeightRequest="22" 
-                                        WidthRequest="56" MinimumWidthRequest="56">
+                                        WidthRequest="64" MinimumWidthRequest="64">
                                     <Picker.ItemsSource>
                                         <x:Array Type="{x:Type x:String}">
                                             <x:String>1</x:String>
@@ -674,15 +674,15 @@
                                 </Picker>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout HorizontalOptions="Center"
-                                                       Spacing="10">
-                                <Label Text="Tilt degree: " WidthRequest="60"  />
+                                                       Spacing="4">
+                                <Label Text="Tilt degree: " WidthRequest="58"  />
 
 
                                 <Picker Background="white"
                                         FontSize="9"
                                         SelectedItem="1"
-                                        HeightRequest="22" MinimumHeightRequest="22"  
-                                        WidthRequest="56" MinimumWidthRequest="56">
+                                        HeightRequest="22" MinimumHeightRequest="22" 
+                                        WidthRequest="64" MinimumWidthRequest="64">
                                     <Picker.ItemsSource>
                                         <x:Array Type="{x:Type x:String}">
                                             <x:String>1</x:String>
