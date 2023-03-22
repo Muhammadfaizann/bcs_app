@@ -64,13 +64,13 @@
 
     <ScrollView>
         <Grid RowDefinitions="*" 
-              Padding="2"
+              Padding="0"
               ColumnDefinitions="1.6*, *"
               ColumnSpacing="4"
               BackgroundColor="{StaticResource Gray500}">
             <!--left column-->
             <Grid Grid.Column="0"
-                  RowDefinitions="343, 210, 100"
+                  RowDefinitions="336, 210, 100"
                   ColumnDefinitions="*, *"
                   ColumnSpacing="4"
                   RowSpacing="2">
@@ -459,7 +459,7 @@
 
             <!--right grid-->
             <Grid Grid.Column="1"
-                  RowDefinitions="18, 396, 238"
+                  RowDefinitions="18, 396, 232"
                   ColumnSpacing="4"
                   RowSpacing="2"
                   ColumnDefinitions="*, 140">
@@ -706,6 +706,7 @@
 
                     <VerticalStackLayout Padding="4,2">
                         <Label Text="Ring Summaries"
+                               HeightRequest="12"
                                    FontAttributes="Bold"
                                    VerticalTextAlignment="Start"/>
 
@@ -809,6 +810,7 @@
 
                         <Label Text="Zone Summaries"
                                Margin="0,6,0,0"
+                               HeightRequest="12"
                                    FontAttributes="Bold"
                                    VerticalTextAlignment="Start"/>
 
