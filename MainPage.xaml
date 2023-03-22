@@ -7,8 +7,8 @@
             <Setter Property="VerticalOptions" Value="Center" />
             <Setter Property="BackgroundColor" Value="white" />
             <Setter Property="WidthRequest" Value="70" />
-            <Setter Property="HeightRequest" Value="20" />
             <Setter Property="FontSize" Value="10" />
+            <Setter Property="HeightRequest" Value="20" />
             <Setter Property="MinimumHeightRequest" Value="24" />
             <Setter Property="Margin" Value="0,0,0,0"/>
         </Style>
@@ -44,6 +44,7 @@
             <Setter Property="WidthRequest" Value="52" />
             <Setter Property="BackgroundColor" Value="White" />
             <Setter Property="FontSize" Value="10" />
+            <Setter Property="HeightRequest" Value="20" />
             <Setter Property="MinimumHeightRequest" Value="24" />
             <Setter Property="VerticalTextAlignment" Value="Start" />
         </Style>
@@ -58,16 +59,16 @@
 
     <ScrollView>
         <Grid RowDefinitions="*" 
-              Padding="6"
+              Padding="4"
               ColumnDefinitions="1.6*, *"
               ColumnSpacing="6"
               BackgroundColor="{StaticResource Gray500}">
             <!--left column-->
             <Grid Grid.Column="0"
-                  RowDefinitions="400, 376, 120"
+                  RowDefinitions="386, 250, 118"
                   ColumnDefinitions="*, *"
                   ColumnSpacing="8"
-                  RowSpacing="8">
+                  RowSpacing="4">
                 <!--row 0 col 0-->
                 <Frame Grid.Column="0"
                        CornerRadius="0"
@@ -84,7 +85,7 @@
                     <Image Aspect="Fill"
                            HorizontalOptions="Center"
                            VerticalOptions="Center" 
-                           Source="ae_right_img.png"></Image>
+                           Source="ae_left_img.png"></Image>
                 </Frame>
                 <!--row 1 col 0-->
                 <Grid Grid.Column="0"
@@ -118,19 +119,19 @@
                         </Border>-->
 
                         <Label Text="Eye:" />
-                        <Entry />
+                        <Entry  IsReadOnly="True"  />
                     </HorizontalStackLayout>
 
                     <HorizontalStackLayout Grid.Row="1" Spacing="10">
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="First Name:" Style="{StaticResource lblSmall}"/>
-                            <Entry WidthRequest="170" />
+                            <Entry  IsReadOnly="True"  WidthRequest="170" />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Exam Date:" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                     </HorizontalStackLayout>
@@ -139,12 +140,12 @@
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Last Name:"  Style="{StaticResource lblSmall}"/>
-                            <Entry WidthRequest="170" />
+                            <Entry  IsReadOnly="True"  WidthRequest="170" />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Time:" WidthRequest="60" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                     </HorizontalStackLayout>
@@ -153,12 +154,12 @@
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Date of Birth:"  Style="{StaticResource lblSmall}" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="D:" WidthRequest="20" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                     </HorizontalStackLayout>
@@ -167,17 +168,17 @@
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Pachy min:"  Style="{StaticResource lblSmall}" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Rh:" WidthRequest="20" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Max dia:" WidthRequest="60" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                     </HorizontalStackLayout>
@@ -186,17 +187,17 @@
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Pachy apex:"  Style="{StaticResource lblSmall}" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Rv:" WidthRequest="20" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Qs status:" WidthRequest="60" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                     </HorizontalStackLayout>
@@ -205,17 +206,17 @@
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Pachy min X:"  Style="{StaticResource lblSmall}" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Axis:" WidthRequest="24" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="KKS:" WidthRequest="56" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                     </HorizontalStackLayout>
@@ -224,12 +225,12 @@
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Pachy min Y:" Style="{StaticResource lblSmall}"/>
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Astg:" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                     </HorizontalStackLayout>
@@ -241,7 +242,7 @@
                 <Grid Grid.Column="1"
                       Grid.Row="1"
                       BackgroundColor="{StaticResource Gray200}"
-                      ColumnDefinitions="170,120,100"
+                      ColumnDefinitions="170,120,00"
                       RowDefinitions="*,*,*,*,*,*,*,*"
                       ColumnSpacing="20"
                       Padding="8">
@@ -255,19 +256,19 @@
                                     Background="{StaticResource Gray200}"></Button>
 
                         <Label Text="Eye:" />
-                        <Entry />
+                        <Entry  IsReadOnly="True"  />
                     </HorizontalStackLayout>
 
                     <HorizontalStackLayout Grid.Row="1" Spacing="10">
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="First Name:" Style="{StaticResource lblSmall}"/>
-                            <Entry WidthRequest="170" />
+                            <Entry  IsReadOnly="True"  WidthRequest="170" />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Exam Date:" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                     </HorizontalStackLayout>
@@ -276,12 +277,12 @@
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Last Name:"  Style="{StaticResource lblSmall}"/>
-                            <Entry WidthRequest="170" />
+                            <Entry  IsReadOnly="True"  WidthRequest="170" />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Time:" WidthRequest="60" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                     </HorizontalStackLayout>
@@ -290,12 +291,12 @@
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Date of Birth:"  Style="{StaticResource lblSmall}" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="D:" WidthRequest="20" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                     </HorizontalStackLayout>
@@ -304,17 +305,17 @@
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Pachy min:"  Style="{StaticResource lblSmall}" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Rh:" WidthRequest="20" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Max dia:" WidthRequest="60" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                     </HorizontalStackLayout>
@@ -323,17 +324,17 @@
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Pachy apex:"  Style="{StaticResource lblSmall}" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Rv:" WidthRequest="20" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Qs status:" WidthRequest="60" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                     </HorizontalStackLayout>
@@ -342,17 +343,17 @@
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Pachy min X:"  Style="{StaticResource lblSmall}" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Axis:" WidthRequest="24" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="KKS:" WidthRequest="56" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                     </HorizontalStackLayout>
@@ -361,12 +362,12 @@
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Pachy min Y:" Style="{StaticResource lblSmall}"/>
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="Astg:" />
-                            <Entry />
+                            <Entry  IsReadOnly="True"  />
                         </HorizontalStackLayout>
 
                     </HorizontalStackLayout>
@@ -389,35 +390,34 @@
                         <Grid 
                           VerticalOptions="Center"
                           ColumnDefinitions="*, *"
-                          HeightRequest="150"
-                          Margin="0, 10"
-                          ColumnSpacing="20">
+                          Margin="0, 3"
+                          ColumnSpacing="10">
 
                             <Grid Grid.Column="0" ColumnDefinitions="*,*">
                                 <VerticalStackLayout Grid.Column="0">
                                     <HorizontalStackLayout Spacing="0">
                                         <Label Style="{StaticResource lblSmall}" Text="Pachy min:"/>
-                                        <Entry x:Name="PachyMin" />
+                                        <Entry  IsReadOnly="True"  x:Name="PachyMin" />
                                     </HorizontalStackLayout>
                                     <HorizontalStackLayout Spacing="0">
                                         <Label Style="{StaticResource lblSmall}" Text="Pachy apex:"/>
-                                        <Entry x:Name="PachyApex"/>
+                                        <Entry  IsReadOnly="True"  x:Name="PachyApex" />
                                     </HorizontalStackLayout>
                                 </VerticalStackLayout>
 
                                 <VerticalStackLayout Grid.Column="1"
                                              Spacing="4">
                                     <HorizontalStackLayout Spacing="25">
-                                        <Label Text="Pachy min X:"/>
-                                        <Entry x:Name="PachyMinx"/>
+                                        <Label Text="Pachy min X:" WidthRequest="70"/>
+                                        <Entry  IsReadOnly="True"  x:Name="PachyMinx"/>
                                     </HorizontalStackLayout>
                                     <HorizontalStackLayout Spacing="25">
-                                        <Label Text="Pachy min Y:"/>
-                                        <Entry x:Name="PachyMinY"/>
+                                        <Label Text="Pachy min Y:" WidthRequest="70"/>
+                                        <Entry  IsReadOnly="True"  x:Name="PachyMinY"/>
                                     </HorizontalStackLayout>
                                     <HorizontalStackLayout>
-                                        <Label Text="Pachy min dist:"/>
-                                        <Entry x:Name="PachyMinDist"/>
+                                        <Label Text="Pachy min dist:" WidthRequest="80"/>
+                                        <Entry  IsReadOnly="True"  x:Name="PachyMinDist"/>
                                     </HorizontalStackLayout>
                                 </VerticalStackLayout>
                             </Grid>
@@ -427,11 +427,11 @@
                                              Spacing="4">
                                     <HorizontalStackLayout>
                                         <Label Text="Rh:"/>
-                                        <Entry x:Name="RhTextbox"/>
+                                        <Entry  IsReadOnly="True"  x:Name="RhTextbox"/>
                                     </HorizontalStackLayout>
                                     <HorizontalStackLayout>
                                         <Label Text="Rv:"/>
-                                        <Entry x:Name="RvTextbox"/>
+                                        <Entry  IsReadOnly="True"  x:Name="RvTextbox"/>
                                     </HorizontalStackLayout>
                                 </VerticalStackLayout>
 
@@ -439,15 +439,15 @@
                                              Spacing="4">
                                     <HorizontalStackLayout Spacing="32">
                                         <Label Text="Axis:"/>
-                                        <Entry x:Name="axisTextbox"/>
+                                        <Entry  IsReadOnly="True"  x:Name="axisTextbox"/>
                                     </HorizontalStackLayout>
                                     <HorizontalStackLayout  Spacing="32">
                                         <Label Text="Astg:"/>
-                                        <Entry x:Name="astgTextBox"/>
+                                        <Entry  IsReadOnly="True"  x:Name="astgTextBox"/>
                                     </HorizontalStackLayout>
                                     <HorizontalStackLayout>
                                         <Label Text="Max. dia:"/>
-                                        <Entry x:Name="MaxDiaTextbox"/>
+                                        <Entry  IsReadOnly="True"  x:Name="MaxDiaTextbox"/>
                                     </HorizontalStackLayout>
                                 </VerticalStackLayout>
                             </Grid>
@@ -460,7 +460,7 @@
 
             <!--right grid-->
             <Grid Grid.Column="1"
-                  RowDefinitions="50, 490, 360"
+                  RowDefinitions="30, 460, 260"
                   ColumnSpacing="8"
                   RowSpacing="6"
                   ColumnDefinitions="*, 140">
@@ -468,6 +468,7 @@
                 <Frame BackgroundColor="{StaticResource Gray200}"
                        Grid.Row="0"
                        CornerRadius="0"
+                       Padding="0"
                        Grid.ColumnSpan="2">
                     <Label Text="Interocular Difference - Anterior Elevation"
                            FontAttributes="Bold"
@@ -492,8 +493,8 @@
                 <!--row 1 col 1-->
                 <Grid Grid.Row="1"
                       Grid.Column="1"
-                      RowDefinitions="90, 90, *"
-                      RowSpacing="6"
+                      RowDefinitions="88, 88, *"
+                      RowSpacing="4"
                       ColumnDefinitions="*">
                     <Grid Grid.Row="0"
                           Padding="4"
@@ -512,7 +513,7 @@
                           BackgroundColor="{StaticResource Gray200}">
 
                         <VerticalStackLayout Padding="0,0" Spacing="0">
-                            <Label Text="Mode" FontAttributes="Bold"/>
+                            <Label Text="Symmetry" FontAttributes="Bold"/>
                             <RadioButton Content="Auto" IsChecked="True" HeightRequest="34"/>
                             <RadioButton Content="Manual" HeightRequest="34"/>
                         </VerticalStackLayout>
@@ -530,16 +531,18 @@
 
                             <HorizontalStackLayout HorizontalOptions="Center"
                                                        Spacing="10">
-                                <Label Text="VBS:" WidthRequest="50"/>
-                                <Entry x:Name="vbsTextbox"
-                                            Style="{StaticResource EntrySmallBox}"/>
+                                <Label Text="VBS:" WidthRequest="60"/>
+
+                                <Entry Style="{StaticResource EntrySmallBox}"/>
+                                
                             </HorizontalStackLayout>
                             <HorizontalStackLayout HorizontalOptions="Center"
                                                        Spacing="10">
-                                <Label Text="Zone:" WidthRequest="50"/>
-                                <Entry x:Name="zoneTextbox"
-                                            Style="{StaticResource EntrySmallBox}"
-                                   x:DataType="x:Int32"/>
+                                <Label Text="Zone:" WidthRequest="60"/>
+
+
+                                <Entry Style="{StaticResource EntrySmallBox}"/>
+
                             </HorizontalStackLayout>
 
 
@@ -548,40 +551,40 @@
                                FontAttributes="Bold"/>
                             <HorizontalStackLayout HorizontalOptions="Center"
                                                        Spacing="10">
-                                <Label Text="X Axis: " WidthRequest="50"
+                                <Label Text="X Axis: " WidthRequest="60"
                                    VerticalOptions="Center"/>
                                 <Entry x:Name="xAxisTextbox"
                                             Style="{StaticResource EntrySmallBox}"/>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout HorizontalOptions="Center"
                                                        Spacing="10">
-                                <Label Text="Y Axis: " WidthRequest="50"/>
+                                <Label Text="Y Axis: " WidthRequest="60"/>
                                 <Entry x:Name="yAxisTextbox"
                                             Style="{StaticResource EntrySmallBox}"
                                    x:DataType="x:Int32"/>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout HorizontalOptions="Center"
                                                        Spacing="10">
-                                <Label Text="Z Axis: " WidthRequest="50" />
+                                <Label Text="Z Axis: " WidthRequest="60" />
                                 <Entry x:Name="zAxisTextbox"
                                             Style="{StaticResource EntrySmallBox}"/>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout HorizontalOptions="Center"
                                                        Spacing="10">
-                                <Label Text="Rotate: " WidthRequest="50" />
+                                <Label Text="Rotate: " WidthRequest="60" />
                                 <Entry x:Name="rotateTextbox"
                                             Style="{StaticResource EntrySmallBox}"
                                    x:DataType="x:Int32"/>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout HorizontalOptions="Center"
                                                        Spacing="10">
-                                <Label Text="Tilt Axis:" WidthRequest="50"  />
+                                <Label Text="Tilt Axis:" WidthRequest="60"  />
                                 <Entry x:Name="tiltTextbox"
                                             Style="{StaticResource EntrySmallBox}"/>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout HorizontalOptions="Center"
                                                        Spacing="10">
-                                <Label Text="Tilt degree: " WidthRequest="50"  />
+                                <Label Text="Tilt degree: " WidthRequest="60"  />
                                 <Entry x:Name="tiltDegreeTextbox"
                                             Style="{StaticResource EntrySmallBox}"
                                    x:DataType="x:Int32"/>
@@ -596,13 +599,12 @@
                       BackgroundColor="{StaticResource Gray200}"
                       Padding="0">
 
-                    <VerticalStackLayout Padding="8">
+                    <VerticalStackLayout Padding="6,4">
                         <Label Text="Ring Summaries"
                                    FontAttributes="Bold"
                                    VerticalTextAlignment="Start"/>
 
-
-                        <VerticalStackLayout Margin="0, 10" Spacing="6">
+                        <VerticalStackLayout Margin="0,2" Spacing="4">
 
                             <Grid Margin="0" Padding="0" ColumnDefinitions="22,*,*,*,*,*,*">
                                 <Grid Grid.Column="0"></Grid>
@@ -631,22 +633,22 @@
                                     <Label Text="Avg:" HorizontalTextAlignment="Center"/>
                                 </Grid>
                                 <Grid Grid.Column="1">
-                                    <Entry Style="{StaticResource EntrySmallBox}" />
+                                    <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                 </Grid>
                                 <Grid Grid.Column="2">
-                                    <Entry Style="{StaticResource EntrySmallBox}" />
+                                    <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                 </Grid>
                                 <Grid Grid.Column="3">
-                                    <Entry Style="{StaticResource EntrySmallBox}" />
+                                    <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                 </Grid>
                                 <Grid Grid.Column="4">
-                                    <Entry Style="{StaticResource EntrySmallBox}" />
+                                    <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                 </Grid>
                                 <Grid Grid.Column="5">
-                                    <Entry Style="{StaticResource EntrySmallBox}" />
+                                    <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                 </Grid>
                                 <Grid Grid.Column="6">
-                                    <Entry Style="{StaticResource EntrySmallBox}" />
+                                    <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                 </Grid>
                             </Grid>
 
@@ -655,22 +657,22 @@
                                     <Label Text="Min:" HorizontalTextAlignment="Center"/>
                                 </Grid>
                                 <Grid Grid.Column="1">
-                                    <Entry Style="{StaticResource EntrySmallBox}" />
+                                    <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                 </Grid>
                                 <Grid Grid.Column="2">
-                                    <Entry Style="{StaticResource EntrySmallBox}" />
+                                    <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                 </Grid>
                                 <Grid Grid.Column="3">
-                                    <Entry Style="{StaticResource EntrySmallBox}" />
+                                    <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                 </Grid>
                                 <Grid Grid.Column="4">
-                                    <Entry Style="{StaticResource EntrySmallBox}" />
+                                    <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                 </Grid>
                                 <Grid Grid.Column="5">
-                                    <Entry Style="{StaticResource EntrySmallBox}" />
+                                    <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                 </Grid>
                                 <Grid Grid.Column="6">
-                                    <Entry Style="{StaticResource EntrySmallBox}" />
+                                    <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                 </Grid>
                             </Grid>
 
@@ -679,22 +681,22 @@
                                     <Label Text="Max:" HorizontalTextAlignment="Center"/>
                                 </Grid>
                                 <Grid Grid.Column="1">
-                                    <Entry Style="{StaticResource EntrySmallBox}" />
+                                    <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                 </Grid>
                                 <Grid Grid.Column="2">
-                                    <Entry Style="{StaticResource EntrySmallBox}" />
+                                    <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                 </Grid>
                                 <Grid Grid.Column="3">
-                                    <Entry Style="{StaticResource EntrySmallBox}" />
+                                    <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                 </Grid>
                                 <Grid Grid.Column="4">
-                                    <Entry Style="{StaticResource EntrySmallBox}" />
+                                    <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                 </Grid>
                                 <Grid Grid.Column="5">
-                                    <Entry Style="{StaticResource EntrySmallBox}" />
+                                    <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                 </Grid>
                                 <Grid Grid.Column="6">
-                                    <Entry Style="{StaticResource EntrySmallBox}" />
+                                    <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                 </Grid>
                             </Grid>
 
@@ -705,97 +707,97 @@
                                    FontAttributes="Bold"
                                    VerticalTextAlignment="Start"/>
 
-                        <VerticalStackLayout Margin="0, 10" Spacing="6">
+                        <VerticalStackLayout Margin="0,2" Spacing="6">
 
                             <HorizontalStackLayout>
-                                <VerticalStackLayout Spacing="8">
+                                <VerticalStackLayout Spacing="4">
 
                                     <VerticalStackLayout>
                                         <Label Text="3 nm Zone" HorizontalTextAlignment="End"/>
                                         <HorizontalStackLayout Spacing="6">
                                             <Label Text="Avg:"/>
-                                            <Entry Style="{StaticResource EntrySmallBox}" />
+                                            <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                         </HorizontalStackLayout>
                                     </VerticalStackLayout>
 
                                     <VerticalStackLayout Spacing="0">
                                         <HorizontalStackLayout Spacing="6">
                                             <Label Text="Min:" HorizontalTextAlignment="End"/>
-                                            <Entry Style="{StaticResource EntrySmallBox}" />
+                                            <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                         </HorizontalStackLayout>
                                     </VerticalStackLayout>
 
                                     <VerticalStackLayout Spacing="0">
                                         <HorizontalStackLayout Spacing="6">
                                             <Label Text="Max:" HorizontalTextAlignment="End"/>
-                                            <Entry Style="{StaticResource EntrySmallBox}" />
+                                            <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                         </HorizontalStackLayout>
                                     </VerticalStackLayout>
 
                                 </VerticalStackLayout>
 
-                                <VerticalStackLayout Spacing="8">
+                                <VerticalStackLayout Spacing="4">
 
                                     <VerticalStackLayout>
                                         <Label Text="6 nm Zone" HorizontalTextAlignment="End"/>
                                         <HorizontalStackLayout Spacing="6">
                                             <Label Text="Avg:"/>
-                                            <Entry Style="{StaticResource EntrySmallBox}" />
+                                            <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                         </HorizontalStackLayout>
                                     </VerticalStackLayout>
 
                                     <VerticalStackLayout Spacing="0">
                                         <HorizontalStackLayout Spacing="6">
                                             <Label Text="Min:" HorizontalTextAlignment="End"/>
-                                            <Entry Style="{StaticResource EntrySmallBox}" />
+                                            <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                         </HorizontalStackLayout>
                                     </VerticalStackLayout>
 
                                     <VerticalStackLayout Spacing="0">
                                         <HorizontalStackLayout Spacing="6">
                                             <Label Text="Max:" HorizontalTextAlignment="End"/>
-                                            <Entry Style="{StaticResource EntrySmallBox}" />
+                                            <Entry  IsReadOnly="True"  Style="{StaticResource EntrySmallBox}" />
                                         </HorizontalStackLayout>
                                     </VerticalStackLayout>
 
                                 </VerticalStackLayout>
 
-                                <HorizontalStackLayout Margin="0,34,0,0">
+                                <HorizontalStackLayout Margin="0,28,0,0">
 
-                                    <VerticalStackLayout Spacing="8">
+                                    <VerticalStackLayout Spacing="4">
 
                                         <VerticalStackLayout>
                                             <Label Text="3 nm Zone" HorizontalTextAlignment="End"/>
                                             <HorizontalStackLayout Spacing="6">
                                                 <Label Text="Min X:"/>
-                                                <Entry WidthRequest="8" Style="{StaticResource EntrySmallBox}" />
+                                                <Entry  IsReadOnly="True"  WidthRequest="8" Style="{StaticResource EntrySmallBox}" />
                                             </HorizontalStackLayout>
                                         </VerticalStackLayout>
 
                                         <VerticalStackLayout Spacing="0">
                                             <HorizontalStackLayout Spacing="6">
                                                 <Label Text="Min Y:"/>
-                                                <Entry WidthRequest="8" Style="{StaticResource EntrySmallBox}" />
+                                                <Entry  IsReadOnly="True"  WidthRequest="8" Style="{StaticResource EntrySmallBox}" />
                                             </HorizontalStackLayout>
                                         </VerticalStackLayout>
 
                                     </VerticalStackLayout>
 
-                                    <VerticalStackLayout Spacing="8">
-                                        <VerticalStackLayout Spacing="8">
+                                    <VerticalStackLayout Spacing="4">
+                                        <VerticalStackLayout Spacing="4">
 
                                             <VerticalStackLayout>
                                                 <Label Text="6 nm Zone" HorizontalTextAlignment="End"/>
                                                 <HorizontalStackLayout Spacing="6">
                                                     <Label Text="Min X:"/>
-                                                    <Entry WidthRequest="8" Style="{StaticResource EntrySmallBox}" />
+                                                    <Entry  IsReadOnly="True"  WidthRequest="8" Style="{StaticResource EntrySmallBox}" />
                                                 </HorizontalStackLayout>
                                             </VerticalStackLayout>
 
                                             <VerticalStackLayout Spacing="0">
                                                 <HorizontalStackLayout Spacing="6">
                                                     <Label Text="Min Y:" HorizontalTextAlignment="End"/>
-                                                    <Entry WidthRequest="8" Style="{StaticResource EntrySmallBox}" />
+                                                    <Entry  IsReadOnly="True"  WidthRequest="8" Style="{StaticResource EntrySmallBox}" />
                                                 </HorizontalStackLayout>
                                             </VerticalStackLayout>
 
@@ -808,153 +810,13 @@
 
                         </VerticalStackLayout>
 
-                        <!--<Grid HorizontalOptions="Start"
-                                  VerticalOptions="Center"
-                                  ColumnDefinitions="*,*,*,*,*,*,*"
-                                  HeightRequest="120"
-                                  Margin="0, 10"
-                                  ColumnSpacing="10">
-
-                            <VerticalStackLayout Grid.Column="0" Spacing="2">
-
-                                <HorizontalStackLayout Spacing="6">
-                                    <Label Text="Avg:"/>
-                                </HorizontalStackLayout>
-                                <HorizontalStackLayout Spacing="6">
-                                    <Label Text="Min:"/>
-                                </HorizontalStackLayout>
-                                <HorizontalStackLayout Spacing="6">
-                                    <Label Text="Max:"/>
-                                </HorizontalStackLayout>
-                            </VerticalStackLayout>
-
-                            <VerticalStackLayout Grid.Column="1" Spacing="2">
-                                <Label Text="2-3 nm" HorizontalTextAlignment="Center"/>
-                                <Entry Style="{StaticResource EntrySmallBox}" />
-                                <Entry Style="{StaticResource EntrySmallBox}" />
-                                <Entry Style="{StaticResource EntrySmallBox}" />
-                            </VerticalStackLayout>
-
-                            <VerticalStackLayout Grid.Column="2" Spacing="2">
-                                <Label Text="3-4 nm"
-                                           HorizontalTextAlignment="Center"/>
-                                <Entry Style="{StaticResource EntrySmallBox}" />
-                                <Entry Style="{StaticResource EntrySmallBox}" />
-                                <Entry Style="{StaticResource EntrySmallBox}" />
-                            </VerticalStackLayout>
-
-                            <VerticalStackLayout Grid.Column="3"
-                                                     Spacing="2">
-                                <Label Text="4-5 nm"
-                                           HorizontalTextAlignment="Center"/>
-                                <Entry Style="{StaticResource EntrySmallBox}" />
-                                <Entry  Style="{StaticResource EntrySmallBox}"/>
-                                <Entry  Style="{StaticResource EntrySmallBox}"/>
-                            </VerticalStackLayout>
-                            <VerticalStackLayout Grid.Column="4"
-                                                     Spacing="2">
-                                <Label Text="5-6 nm"
-                                           HorizontalTextAlignment="Center"/>
-                                <Entry  Style="{StaticResource EntrySmallBox}"/>
-                                <Entry Style="{StaticResource EntrySmallBox}"/>
-                                <Entry Style="{StaticResource EntrySmallBox}"/>
-                            </VerticalStackLayout>
-                            <VerticalStackLayout Grid.Column="5"
-                                                     Spacing="2">
-                                <Label Text="7-8 nm"
-                                           HorizontalTextAlignment="Center"/>
-                                <Entry Style="{StaticResource EntrySmallBox}"/>
-                                <Entry Style="{StaticResource EntrySmallBox}"/>
-                                <Entry Style="{StaticResource EntrySmallBox}"/>
-                            </VerticalStackLayout>
-                            <VerticalStackLayout Grid.Column="6"
-                                                     Spacing="2">
-                                <Label Text="7-8 nm"
-                                           HorizontalTextAlignment="Center"/>
-                                <Entry Style="{StaticResource EntrySmallBox}"/>
-                                <Entry Style="{StaticResource EntrySmallBox}"/>
-                                <Entry Style="{StaticResource EntrySmallBox}"/>
-                            </VerticalStackLayout>
-                        </Grid>
-
-                        <Label Text="Zone Summaries"
-                                   FontAttributes="Bold"
-                                   VerticalTextAlignment="Start"/>
-                        <Grid HorizontalOptions="Start"
-                                  VerticalOptions="Center"
-                                  ColumnDefinitions="*,*,*,*"
-                                  HeightRequest="150"
-                                  Margin="10"
-                                  ColumnSpacing="20">
-                            <VerticalStackLayout Grid.Column="0"
-                                                     Spacing="2">
-                                <Label Text="3 nm Zones"
-                                           HorizontalTextAlignment="End"/>
-                                <HorizontalStackLayout>
-                                    <Label Text="Avg:"/>
-                                    <Entry  Style="{StaticResource EntrySmallBox}"/>
-                                </HorizontalStackLayout>
-                                <HorizontalStackLayout>
-                                    <Label Text="Min:"/>
-                                    <Entry  Style="{StaticResource EntrySmallBox}"/>
-                                </HorizontalStackLayout>
-                                <HorizontalStackLayout>
-                                    <Label Text="Max:"/>
-                                    <Entry  Style="{StaticResource EntrySmallBox}"/>
-                                </HorizontalStackLayout>
-                            </VerticalStackLayout>
-                            <VerticalStackLayout Grid.Column="1"
-                                                     Spacing="2">
-                                <Label Text="6 nm Zones"
-                                           HorizontalTextAlignment="End"/>
-                                <HorizontalStackLayout>
-                                    <Label Text="Avg:"/>
-                                    <Entry  Style="{StaticResource EntrySmallBox}"/>
-                                </HorizontalStackLayout>
-                                <HorizontalStackLayout>
-                                    <Label Text="Min:"/>
-                                    <Entry  Style="{StaticResource EntrySmallBox}"/>
-                                </HorizontalStackLayout>
-                                <HorizontalStackLayout>
-                                    <Label Text="Max:"/>
-                                    <Entry  Style="{StaticResource EntrySmallBox}"/>
-                                </HorizontalStackLayout>
-                            </VerticalStackLayout>
-                            <VerticalStackLayout Grid.Column="2"
-                                                     Spacing="2">
-                                <Label Text="6 nm Zones"
-                                           HorizontalTextAlignment="End"/>
-                                <HorizontalStackLayout>
-                                    <Label Text="Min X:"/>
-                                    <Entry  Style="{StaticResource EntrySmallBox}"/>
-                                </HorizontalStackLayout>
-                                <HorizontalStackLayout>
-                                    <Label Text="Max X:"/>
-                                    <Entry  Style="{StaticResource EntrySmallBox}"/>
-                                </HorizontalStackLayout>
-                            </VerticalStackLayout>
-                            <VerticalStackLayout Grid.Column="3"
-                                                     Spacing="2">
-                                <Label Text="6 nm Zones"
-                                           HorizontalTextAlignment="End"/>
-                                <HorizontalStackLayout>
-                                    <Label Text="Min Y:"/>
-                                    <Entry  Style="{StaticResource EntrySmallBox}"/>
-                                </HorizontalStackLayout>
-                                <HorizontalStackLayout>
-                                    <Label Text="Max Y:"/>
-                                    <Entry  Style="{StaticResource EntrySmallBox}"/>
-                                </HorizontalStackLayout>
-                            </VerticalStackLayout>
-
-                        </Grid>-->
                     </VerticalStackLayout>
 
                 </Grid>
 
                 <Grid Grid.Column="1"
                       Grid.Row="2"
-                      RowDefinitions="*,0.6*"
+                      RowDefinitions="*,0.4*"
                       RowSpacing="4">
 
                     <Grid Grid.Row="0"
@@ -964,35 +826,33 @@
                         <VerticalStackLayout Padding="8"
                                                  Spacing="6">
                             <Label Text="Exploratory" 
-                                       AbsoluteLayout.LayoutBounds="0,10,250,10"
-                                       Margin="0,0,0,10"
                                        FontAttributes="Bold"/>
                             <HorizontalStackLayout Spacing="2"
                                                            HorizontalOptions="Center">
                                 <Label Text="X:" />
-                                <Entry WidthRequest="15" Margin="0,0,0,0"/>
+                                <Entry  IsReadOnly="True"  WidthRequest="15" Margin="0,0,0,0"/>
                                 <Label Text="Y:" />
-                                <Entry WidthRequest="15" />
+                                <Entry  IsReadOnly="True"  WidthRequest="15" />
                             </HorizontalStackLayout>
                             <HorizontalStackLayout Spacing="30"
                                                        HorizontalOptions="Center">
                                 <Label Text="Point:" />
-                                <Entry WidthRequest="60" />
+                                <Entry  IsReadOnly="True"  WidthRequest="60" />
                             </HorizontalStackLayout>
                             <HorizontalStackLayout Spacing="6"
                                                        HorizontalOptions="Center">
                                 <Label Text="2mm Avg:" />
-                                <Entry WidthRequest="60" />
+                                <Entry  IsReadOnly="True"  WidthRequest="60" />
                             </HorizontalStackLayout>
                             <HorizontalStackLayout Spacing="6"
                                                        HorizontalOptions="Center">
                                 <Label Text="2mm max:" />
-                                <Entry WidthRequest="60" />
+                                <Entry  IsReadOnly="True"  WidthRequest="60" />
                             </HorizontalStackLayout>
                             <HorizontalStackLayout Spacing="6"
                                                        HorizontalOptions="Center">
                                 <Label Text="2mm min:" />
-                                <Entry WidthRequest="60" />
+                                <Entry  IsReadOnly="True"  WidthRequest="60" />
                             </HorizontalStackLayout>
                         </VerticalStackLayout>
 
