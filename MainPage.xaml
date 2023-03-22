@@ -62,39 +62,6 @@
 
     </ContentPage.Resources>
 
-    <!--<ContentPage.MenuBarItems>
-        <MenuBarItem Text="File">
-            <MenuFlyoutItem Text="Exit"
-                            Command="{Binding ExitCommand}" />
-        </MenuBarItem>
-        <MenuBarItem Text="Locations">
-            <MenuFlyoutSubItem Text="Change Location">
-                <MenuFlyoutItem Text="Redmond, USA"
-                                Command="{Binding ChangeLocationCommand}"
-                                CommandParameter="Redmond" />
-                <MenuFlyoutItem Text="London, UK"
-                                Command="{Binding ChangeLocationCommand}"
-                                CommandParameter="London" />
-                <MenuFlyoutItem Text="Berlin, DE"
-                                Command="{Binding ChangeLocationCommand}"
-                                CommandParameter="Berlin"/>
-            </MenuFlyoutSubItem>
-            <MenuFlyoutSeparator />
-            <MenuFlyoutItem Text="Add Location"
-                            Command="{Binding AddLocationCommand}" />
-            <MenuFlyoutItem Text="Edit Location"
-                            Command="{Binding EditLocationCommand}" />
-            <MenuFlyoutItem Text="Remove Location"
-                            Command="{Binding RemoveLocationCommand}" />
-        </MenuBarItem>
-        <MenuBarItem Text="View">
-            <MenuFlyoutItem Text="Refresh"
-                            Command="{Binding RefreshCommand}" />
-            <MenuFlyoutItem Text="Change Theme"
-                            Command="{Binding ChangeThemeCommand}" />
-        </MenuBarItem>
-    </ContentPage.MenuBarItems>-->
-
     <ScrollView>
         <Grid RowDefinitions="*" 
               Padding="2"
@@ -103,7 +70,7 @@
               BackgroundColor="{StaticResource Gray500}">
             <!--left column-->
             <Grid Grid.Column="0"
-                  RowDefinitions="364, 214, 100"
+                  RowDefinitions="343, 210, 100"
                   ColumnDefinitions="*, *"
                   ColumnSpacing="4"
                   RowSpacing="2">
@@ -144,6 +111,13 @@
                                     Background="{StaticResource Gray200}"></Button>
 
                         <Label Text="Eye:" />
+
+                        <!--<Label Text="2" Background="White" 
+                               HeightRequest="16"
+                               WidthRequest="60"
+                               Padding="6"
+                               FontSize="10"></Label>-->
+                        
                         <Entry  IsReadOnly="True"  />
                     </HorizontalStackLayout>
 
@@ -151,7 +125,7 @@
 
                         <HorizontalStackLayout Spacing="0">
                             <Label Text="First Name:" Style="{StaticResource lblSmall}"/>
-                            <Entry  IsReadOnly="True"  WidthRequest="180" />
+                            <Entry  IsReadOnly="True" Text="123"  WidthRequest="180" />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Spacing="0">
@@ -485,7 +459,7 @@
 
             <!--right grid-->
             <Grid Grid.Column="1"
-                  RowDefinitions="20, 414, 244"
+                  RowDefinitions="18, 396, 238"
                   ColumnSpacing="4"
                   RowSpacing="2"
                   ColumnDefinitions="*, 140">
@@ -518,7 +492,7 @@
                 <!--row 1 col 1-->
                 <Grid Grid.Row="1"
                       Grid.Column="1"
-                      RowDefinitions="82, 82, *"
+                      RowDefinitions="80, 80, *"
                       RowSpacing="2"
                       ColumnDefinitions="*">
                     <Grid Grid.Row="0"
@@ -526,7 +500,7 @@
                           BackgroundColor="{StaticResource Gray200}">
 
                         <VerticalStackLayout Padding="0,0" Spacing="0">
-                            <Label Text="Mode" FontAttributes="Bold"/>
+                            <Label Text="Mode" FontAttributes="Bold" HeightRequest="12"/>
                             <RadioButton Content="Auto" IsChecked="True" HeightRequest="32"/>
                             <RadioButton Content="Manual" HeightRequest="32"/>
                         </VerticalStackLayout>
@@ -538,7 +512,7 @@
                           BackgroundColor="{StaticResource Gray200}">
 
                         <VerticalStackLayout Padding="0,0" Spacing="0">
-                            <Label Text="Symmetry" FontAttributes="Bold"/>
+                            <Label Text="Symmetry" FontAttributes="Bold" HeightRequest="12"/>
                             <RadioButton Content="Direct" IsChecked="True" HeightRequest="32"/>
                             <RadioButton Content="Mirror" HeightRequest="32"/>
                         </VerticalStackLayout>
@@ -560,9 +534,9 @@
 
                                 <Picker x:Name="picker" Background="white"
                                         Margin="8,0,0,0"
-                                        FontSize="10"
+                                        FontSize="9"
                                         SelectedItem="1"
-                                        HeightRequest="24" MinimumHeightRequest="24"  
+                                        HeightRequest="22" MinimumHeightRequest="22"
                                         WidthRequest="56" MinimumWidthRequest="56">
                                     <Picker.ItemsSource>
                                         <x:Array Type="{x:Type x:String}">
@@ -583,9 +557,9 @@
 
 
                                 <Picker Background="white"
-                                        FontSize="10"
+                                        FontSize="9"
                                         SelectedItem="1"
-                                        HeightRequest="24" MinimumHeightRequest="24"  
+                                        HeightRequest="22" MinimumHeightRequest="22" 
                                         WidthRequest="56" MinimumWidthRequest="56">
                                     <Picker.ItemsSource>
                                         <x:Array Type="{x:Type x:String}">
@@ -609,9 +583,9 @@
                                    VerticalOptions="Center"/>
 
                                 <Picker Background="white"
-                                        FontSize="10"
+                                        FontSize="9"
                                         SelectedItem="1"
-                                        HeightRequest="24" MinimumHeightRequest="24"  
+                                        HeightRequest="22" MinimumHeightRequest="22"  
                                         WidthRequest="56" MinimumWidthRequest="56">
                                     <Picker.ItemsSource>
                                         <x:Array Type="{x:Type x:String}">
@@ -628,9 +602,9 @@
                                 <Label Text="Y Axis: " WidthRequest="60"/>
 
                                 <Picker Background="white"
-                                        FontSize="10"
+                                        FontSize="9"
                                         SelectedItem="1"
-                                        HeightRequest="24" MinimumHeightRequest="24"  
+                                        HeightRequest="22" MinimumHeightRequest="22"
                                         WidthRequest="56" MinimumWidthRequest="56">
                                     <Picker.ItemsSource>
                                         <x:Array Type="{x:Type x:String}">
@@ -647,9 +621,9 @@
                                 <Label Text="Z Axis: " WidthRequest="60" />
 
                                 <Picker Background="white"
-                                        FontSize="10"
+                                        FontSize="9"
                                         SelectedItem="1"
-                                        HeightRequest="24" MinimumHeightRequest="24"  
+                                        HeightRequest="22" MinimumHeightRequest="22"
                                         WidthRequest="56" MinimumWidthRequest="56">
                                     <Picker.ItemsSource>
                                         <x:Array Type="{x:Type x:String}">
@@ -666,9 +640,9 @@
                                 <Label Text="Rotate: " WidthRequest="60" />
 
                                 <Picker Background="white"
-                                        FontSize="10"
+                                        FontSize="9"
                                         SelectedItem="1"
-                                        HeightRequest="24" MinimumHeightRequest="24"  
+                                        HeightRequest="22" MinimumHeightRequest="22"  
                                         WidthRequest="56" MinimumWidthRequest="56">
                                     <Picker.ItemsSource>
                                         <x:Array Type="{x:Type x:String}">
@@ -685,9 +659,9 @@
                                 <Label Text="Tilt Axis:" WidthRequest="60"  />
 
                                 <Picker Background="white"
-                                        FontSize="10"
+                                        FontSize="9"
                                         SelectedItem="1"
-                                        HeightRequest="24" MinimumHeightRequest="24"  
+                                        HeightRequest="22" MinimumHeightRequest="22" 
                                         WidthRequest="56" MinimumWidthRequest="56">
                                     <Picker.ItemsSource>
                                         <x:Array Type="{x:Type x:String}">
@@ -705,9 +679,9 @@
 
 
                                 <Picker Background="white"
-                                        FontSize="10"
+                                        FontSize="9"
                                         SelectedItem="1"
-                                        HeightRequest="24" MinimumHeightRequest="24"  
+                                        HeightRequest="22" MinimumHeightRequest="22"  
                                         WidthRequest="56" MinimumWidthRequest="56">
                                     <Picker.ItemsSource>
                                         <x:Array Type="{x:Type x:String}">
