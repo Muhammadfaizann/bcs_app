@@ -3,13 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Bilateral_Corneal_Symmetry_3D_Analyzer"
              x:Class="Bilateral_Corneal_Symmetry_3D_Analyzer.App"
+             xmlns:controls="clr-namespace:Bilateral_Corneal_Symmetry_3D_Analyzer.Views.Controls"
              xmlns:maui="clr-namespace:Microsoft.Maui.Controls;assembly=Microsoft.Maui.Controls">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
-                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+                <ResourceDictionary Source="/Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="/Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            <Color x:Key="NavigationPrimary">Indigo</Color>
+            <Color x:Key="WhiteColor">#FFFFFF</Color>
+            <Color x:Key="DisableButtonImageColor">#FFD3D3D3</Color>
+            <Color x:Key="EnableButtonImageColor">#FF808080</Color>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
