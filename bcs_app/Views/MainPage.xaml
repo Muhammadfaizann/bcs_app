@@ -4,6 +4,7 @@
              xmlns:c="http://apes.ge"
              xmlns:ds="clr-namespace:Bilateral_Corneal_Symmetry_3D_Analyzer"
              xmlns:controls="clr-namespace:Bilateral_Corneal_Symmetry_3D_Analyzer.Views.Controls"
+             xmlns:popups="clr-namespace:Bilateral_Corneal_Symmetry_3D_Analyzer.Popups"
              x:Class="Bilateral_Corneal_Symmetry_3D_Analyzer.MainPage"
              x:Name="ThisControl">
     <ContentPage.Resources>
@@ -179,8 +180,7 @@
                     Grid.Column="1"
                     VerticalOptions="EndAndExpand"
                     ItemsSource="{Binding DisplayItems}"
-                    SelectedItem="{Binding SelectedDisplayItem,Mode=TwoWay}">
-            </Picker>
+                    SelectedItem="{Binding SelectedDisplayItem,Mode=TwoWay}"></Picker>
             <controls:TopMenuButton Grid.Row="0"
                                     Grid.Column="1"
                                     Text="Display"
@@ -1153,5 +1153,8 @@
                 </Grid>
             </Grid>
         </ScrollView>
+        <popups:ImportPopup Grid.Row="1"
+                            BindingContext="{Binding ImportPopupViewModel,Mode=OneWay}"
+                            IsVisible="{Binding BindingContext.CanShowImportPopup,Source={x:Reference ThisControl}}" />
     </Grid>
 </ContentPage>

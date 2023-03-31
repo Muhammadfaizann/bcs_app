@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Grid xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+      xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+      x:Class="Bilateral_Corneal_Symmetry_3D_Analyzer.Popups.ImportPopup"
+      Margin="-10,-10,-10,0"
+      RowDefinitions="*,2*,*"
+      ColumnDefinitions="*,2*,*">
+    <Grid x:Name="RootLayout"
+          Grid.Row="1"
+          Grid.Column="1"
+          BackgroundColor="Transparent">
+        <BoxView BackgroundColor="Transparent"
+                 Color="White"
+                 CornerRadius="5" />
+        <Grid Padding="20"
+              RowSpacing="10"
+              BackgroundColor="Transparent"
+              ColumnSpacing="10"
+              RowDefinitions="Auto,1,Auto,*,Auto,Auto,Auto"
+              ColumnDefinitions="*,*">
+            <Label Grid.Row="0"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Margin="-10,0,0,0"
+                   Text="Import data"
+                   FontSize="Title" />
+            <BoxView Grid.Row="1"
+                     Grid.Column="0"
+                     Grid.ColumnSpan="2"
+                     Margin="-20,0,-20,0"
+                     Color="LightGray" />
+            <Grid Grid.Row="3"
+                  Grid.Column="0"
+                  Grid.ColumnSpan="2"
+                  RowDefinitions="Auto,*"
+                  ColumnDefinitions="*,10,*">
+                <Label Grid.Row="0"
+                       Grid.Column="0"
+                       Text="Patient list"
+                       FontAttributes="Bold"
+                       FontSize="Caption" />
+                <ContentView Grid.Row="1"
+                             Grid.Column="0"
+                             Margin="0,10,0,0"
+                             BackgroundColor="LightGray"
+                             Padding="5">
+                    <ListView Grid.Row="1"
+                              Grid.Column="0"
+                              HasUnevenRows="True"
+                              BackgroundColor="{StaticResource WhiteColor}"
+                              SelectedItem="{Binding SelectedPatient, Mode=TwoWay}"
+                              ItemsSource="{Binding Patients}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid RowDefinitions="Auto,Auto"
+                                          Margin="5,5,5,0"
+                                          ColumnDefinitions="*,5,*">
+                                        <Label Grid.Row="0"
+                                               Grid.Column="0"
+                                               Text="{Binding Name}"
+                                               FontAttributes="Bold"
+                                               TextColor="Black"
+                                               FontSize="Caption" />
+                                        <Label Grid.Row="0"
+                                               Grid.Column="2"
+                                               Text="{Binding Code}"
+                                               HorizontalTextAlignment="End"
+                                               TextColor="Gray"
+                                               FontSize="Caption" />
+                                        <Label Grid.Row="1"
+                                               Grid.Column="0"
+                                               Text="{Binding Condition}"
+                                               TextColor="Gray"
+                                               FontSize="Caption" />
+                                        <Label Grid.Row="1"
+                                               Grid.Column="2"
+                                               Text="{Binding Date,StringFormat='{0:MMMM dd, yyyy}'}"
+                                               HorizontalTextAlignment="End"
+                                               TextColor="Gray"
+                                               FontSize="Caption" />
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </ContentView>
+                <Label Grid.Row="0"
+                       Grid.Column="2"
+                       Text="Existing examinations"
+                       FontAttributes="Bold"
+                       FontSize="Caption" />
+                <ContentView Grid.Row="1"
+                             Grid.Column="2"
+                             Margin="0,10,0,0"
+                             BackgroundColor="LightGray"
+                             Padding="5">
+                    <ListView Grid.Row="1"
+                              Grid.Column="2"
+                              HasUnevenRows="True"
+                              BackgroundColor="{StaticResource WhiteColor}"
+                              SelectedItem="{Binding SelectedExamination, Mode=TwoWay}"
+                              ItemsSource="{Binding Examinations}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid RowDefinitions="Auto,Auto"
+                                          Margin="5,5,5,0"
+                                          ColumnDefinitions="*,5,*">
+                                        <Label Grid.Row="0"
+                                               Grid.Column="0"
+                                               Text="{Binding Title}"
+                                               TextColor="Black"
+                                               FontAttributes="Bold"
+                                               FontSize="Caption" />
+                                        <Label Grid.Row="1"
+                                               Grid.Column="0"
+                                               Text="{Binding Date,StringFormat='{0:MMMM dd, yyyy}'}"
+                                               TextColor="Gray"
+                                               FontSize="Caption" />
+                                        <Label Grid.Row="1"
+                                               Grid.Column="2"
+                                               Text="{Binding Time,StringFormat='{0:hh\\:mm}'}"
+                                               HorizontalTextAlignment="End"
+                                               TextColor="Gray"
+                                               FontSize="Caption" />
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </ContentView>
+            </Grid>
+            <Button Grid.Row="6"
+                    Grid.Column="0"
+                    Text="Import data"
+                    HorizontalOptions="End"
+                    Command="{Binding ImportCommand}" />
+            <Button Grid.Row="6"
+                    Grid.Column="1"
+                    HorizontalOptions="Start"
+                    Text="Cancel"
+                    Command="{Binding CancelCommand}" />
+        </Grid>
+    </Grid>
+</Grid>

@@ -1,6 +1,8 @@
-﻿using APES.UI.XF;
+﻿using SystemCore;
 using Microsoft.Extensions.Logging;
-using SystemCore;
+
+using APES.UI.XF;
+using Bilateral_Corneal_Symmetry_3D_Analyzer.Popups;
 
 namespace Bilateral_Corneal_Symmetry_3D_Analyzer;
 public static class MauiProgram
@@ -24,6 +26,7 @@ public static class MauiProgram
 
 
         builder.Services.AddTransient<MainPage>();
+        builder.Services.AddTransient<ImportPopup>();
 
 #if DEBUG
         builder.Logging.AddDebug();

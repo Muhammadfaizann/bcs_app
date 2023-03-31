@@ -82,4 +82,10 @@
 		<ProjectReference Include="..\SystemCore\SystemCore.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="Popups\ImportPopup.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>

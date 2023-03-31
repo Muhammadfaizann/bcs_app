@@ -1,27 +1,37 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
+﻿using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace SystemCore.ViewModels;
-
 [INotifyPropertyChanged]
 public partial class MainPageViewModel
 {
     public MainPageViewModel()
     {
         DisplayItems = new List<string>() { "AE", "PE", "TH" };
+        ImportPopupViewModel= new ImportPopupViewModel(HideImportView);
     }
 
+    #region Methods
+    void HideImportView() => CanShowImportPopup = false;
+    #endregion
+
+    #region Properties
     [ObservableProperty]
     List<string> displayItems;
 
     [ObservableProperty]
     string selectedDisplayItem;
 
+    [ObservableProperty]
+    bool canShowImportPopup;
+
+    [ObservableProperty]
+    ImportPopupViewModel importPopupViewModel;
+    #endregion
+
+    #region Commands
     [RelayCommand]
-    async void Exam()
-    {
-        Console.WriteLine("Exam command clicked!!!");
-    }
+    void Exam() => CanShowImportPopup = true;
 
     [RelayCommand]
     async void Display()
@@ -46,4 +56,5 @@ public partial class MainPageViewModel
     {
         Console.WriteLine("Print command clicked!!!");
     }
+    #endregion
 }
