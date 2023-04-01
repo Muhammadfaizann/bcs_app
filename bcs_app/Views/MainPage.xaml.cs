@@ -1,4 +1,4 @@
-﻿using SystemCore.ViewModels;
+﻿using Bilateral_Corneal_Symmetry_3D_Analyzer.ViewModels;
 
 namespace Bilateral_Corneal_Symmetry_3D_Analyzer;
 public partial class MainPage : ContentPage

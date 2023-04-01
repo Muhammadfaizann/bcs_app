@@ -1,14 +1,14 @@
-﻿using CommunityToolkit.Mvvm.Input;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 
-namespace SystemCore.ViewModels;
+namespace Bilateral_Corneal_Symmetry_3D_Analyzer.ViewModels;
 [INotifyPropertyChanged]
 public partial class MainPageViewModel
 {
     public MainPageViewModel()
     {
         DisplayItems = new List<string>() { "AE", "PE", "TH" };
-        ImportPopupViewModel= new ImportPopupViewModel(HideImportView);
+        ImportPopupViewModel = new ImportPopupViewModel(HideImportView);
     }
 
     #region Methods
@@ -31,7 +31,11 @@ public partial class MainPageViewModel
 
     #region Commands
     [RelayCommand]
-    void Exam() => CanShowImportPopup = true;
+    void Exam()
+    {
+        ImportPopupViewModel.init();
+        CanShowImportPopup = true;
+    }
 
     [RelayCommand]
     async void Display()

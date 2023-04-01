@@ -58,8 +58,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Remove=".gitignore" />
-		<None Remove="README.md" />
 		<None Remove="Resources\Images\ae_img_3.png" />
 		<None Remove="Resources\Images\ae_left_img.png" />
 		<None Remove="Resources\Images\ae_right_img.png" />
@@ -68,6 +66,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0-preview2" />
 		<PackageReference Include="IronPython" Version="3.4.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="ContextMenuContainer" Version="1.1.0.2-preview" />
@@ -76,16 +75,6 @@
 
 	<ItemGroup>
 		<Folder Include="Resources\Python\" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<ProjectReference Include="..\SystemCore\SystemCore.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiXaml Update="Popups\ImportPopup.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	</ItemGroup>
 
 </Project>
