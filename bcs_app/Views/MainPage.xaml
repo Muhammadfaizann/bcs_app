@@ -164,7 +164,7 @@
     <Grid RowDefinitions="Auto,*">
         <Grid Grid.Row="0"
               ColumnSpacing="0"
-              ColumnDefinitions="Auto,Auto,Auto,*,Auto,Auto">
+              ColumnDefinitions="Auto,Auto,Auto,*,Auto,Auto,Auto">
             <controls:TopMenuButton Grid.Column="0"
                                     Text="Patient/Exam"
                                     ContentLayout="Left"
@@ -179,8 +179,8 @@
             <Picker Grid.Row="0"
                     Grid.Column="1"
                     VerticalOptions="EndAndExpand"
-                    ItemsSource="{Binding DisplayItems}"
-                    SelectedItem="{Binding SelectedDisplayItem,Mode=TwoWay}"></Picker>
+                    SelectedItem="{Binding SelectedDisplayItem,Mode=TwoWay}"
+                    ItemsSource="{Binding DisplayItems}" />
             <controls:TopMenuButton Grid.Row="0"
                                     Grid.Column="1"
                                     Text="Display"
@@ -205,6 +205,17 @@
                 </controls:TopMenuButton.ImageSource>
             </controls:TopMenuButton>
             <controls:TopMenuButton Grid.Column="4"
+                                    Text="About"
+                                    ContentLayout="Left"
+                                    Command="{Binding AboutCommand}">
+                <controls:TopMenuButton.ImageSource>
+                    <FontImageSource Glyph="{x:Static ds:FontAwesomeIcons.Info}"
+                                     Size="20"
+                                     FontFamily="FASolid"
+                                     Color="{Binding ImageColor, Source={x:RelativeSource FindAncestor, AncestorType={x:Type controls:TopMenuButton}}}" />
+                </controls:TopMenuButton.ImageSource>
+            </controls:TopMenuButton>
+            <controls:TopMenuButton Grid.Column="5"
                                     Text="JPG"
                                     ContentLayout="Left"
                                     Command="{Binding ImageCommand}">
@@ -215,7 +226,7 @@
                                      Color="{Binding ImageColor, Source={x:RelativeSource FindAncestor, AncestorType={x:Type controls:TopMenuButton}}}" />
                 </controls:TopMenuButton.ImageSource>
             </controls:TopMenuButton>
-            <controls:TopMenuButton Grid.Column="5"
+            <controls:TopMenuButton Grid.Column="6"
                                     Text="Print"
                                     ContentLayout="Left"
                                     Command="{Binding PrintCommand}">
@@ -1156,5 +1167,8 @@
         <popups:ImportPopup Grid.Row="1"
                             BindingContext="{Binding ImportPopupViewModel,Mode=OneWay}"
                             IsVisible="{Binding BindingContext.CanShowImportPopup,Source={x:Reference ThisControl}}" />
+        <popups:AboutPopup Grid.Row="1"
+                           BindingContext="{Binding AboutPopupViewModel,Mode=OneWay}"
+                           IsVisible="{Binding BindingContext.CanShowAboutPopup,Source={x:Reference ThisControl}}" />
     </Grid>
 </ContentPage>

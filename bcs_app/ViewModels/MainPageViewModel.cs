@@ -8,11 +8,13 @@ public partial class MainPageViewModel
     public MainPageViewModel()
     {
         DisplayItems = new List<string>() { "AE", "PE", "TH" };
-        ImportPopupViewModel = new ImportPopupViewModel(HideImportView);
+        ImportPopupViewModel = new ImportPopupViewModel(() => CanShowImportPopup = false);
+        AboutPopupViewModel = new AboutPopupViewModel(() => CanShowAboutPopup = false);
     }
 
     #region Methods
     void HideImportView() => CanShowImportPopup = false;
+    void HideAboutView() => CanShowAboutPopup = false;
     #endregion
 
     #region Properties
@@ -20,13 +22,34 @@ public partial class MainPageViewModel
     List<string> displayItems;
 
     [ObservableProperty]
-    string selectedDisplayItem;
-
-    [ObservableProperty]
     bool canShowImportPopup;
 
     [ObservableProperty]
+    bool canShowAboutPopup;
+
+    [ObservableProperty]
     ImportPopupViewModel importPopupViewModel;
+
+    [ObservableProperty]
+    AboutPopupViewModel aboutPopupViewModel;
+
+    private string _selectedDisplayItem;
+    public string SelectedDisplayItem
+    {
+        get => _selectedDisplayItem;
+        set
+        {
+            _selectedDisplayItem = value;
+            OnPropertyChanged();
+
+            //Pass selected option to main page, it is part of the requirements otherwise we have the selected option part of this vm anyway
+            if (Application.Current.MainPage is AppShell appShell)
+            {
+                if (appShell.CurrentPage is MainPage mp)
+                    mp.DisplaySettingsChanged(value);
+            }
+        }
+    }
     #endregion
 
     #region Commands
@@ -48,6 +71,10 @@ public partial class MainPageViewModel
     {
         Console.WriteLine("Settings command clicked!!!");
     }
+
+
+    [RelayCommand]
+    void About() => CanShowAboutPopup = true;
 
     [RelayCommand]
     async void Image()

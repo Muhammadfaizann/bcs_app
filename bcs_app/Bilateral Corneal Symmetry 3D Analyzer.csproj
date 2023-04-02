@@ -77,4 +77,16 @@
 		<Folder Include="Resources\Python\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Compile Update="Popups\AboutPopup.xaml.cs">
+	    <DependentUpon>AboutPopup.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Popups\AboutPopup.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>
