@@ -1167,6 +1167,12 @@
         <popups:ImportPopup Grid.Row="1"
                             BindingContext="{Binding ImportPopupViewModel,Mode=OneWay}"
                             IsVisible="{Binding BindingContext.CanShowImportPopup,Source={x:Reference ThisControl}}" />
+        <popups:SettingPopup Grid.Row="1"
+                             BindingContext="{Binding SettingPopupViewModel,Mode=OneWay}"
+                             IsVisible="{Binding BindingContext.CanShowSettingPopup,Source={x:Reference ThisControl}}" />
+        <popups:JpgPopup Grid.Row="1"
+                         BindingContext="{Binding JpgPopupViewModel,Mode=OneWay}"
+                         IsVisible="{Binding BindingContext.CanShowJpgPopup,Source={x:Reference ThisControl}}" />
         <popups:AboutPopup Grid.Row="1"
                            BindingContext="{Binding AboutPopupViewModel,Mode=OneWay}"
                            IsVisible="{Binding BindingContext.CanShowAboutPopup,Source={x:Reference ThisControl}}" />

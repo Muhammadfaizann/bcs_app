@@ -8,13 +8,20 @@ public partial class MainPageViewModel
     public MainPageViewModel()
     {
         DisplayItems = new List<string>() { "AE", "PE", "TH" };
+
         ImportPopupViewModel = new ImportPopupViewModel(() => CanShowImportPopup = false);
         AboutPopupViewModel = new AboutPopupViewModel(() => CanShowAboutPopup = false);
+
+        SettingPopupViewModel = new SettingPopupViewModel(() => CanShowSettingPopup = false);
+        JpgPopupViewModel = new JpgPopupViewModel(() => CanShowJpgPopup = false);
     }
 
     #region Methods
     void HideImportView() => CanShowImportPopup = false;
     void HideAboutView() => CanShowAboutPopup = false;
+
+    void HideJpgView() => CanShowJpgPopup = false;
+    void HideSettingView() => CanShowSettingPopup = false;
     #endregion
 
     #region Properties
@@ -28,7 +35,19 @@ public partial class MainPageViewModel
     bool canShowAboutPopup;
 
     [ObservableProperty]
+    bool canShowSettingPopup;
+
+    [ObservableProperty]
+    bool canShowJpgPopup;
+
+    [ObservableProperty]
     ImportPopupViewModel importPopupViewModel;
+
+    [ObservableProperty]
+    SettingPopupViewModel settingPopupViewModel;
+
+    [ObservableProperty]
+    JpgPopupViewModel jpgPopupViewModel;
 
     [ObservableProperty]
     AboutPopupViewModel aboutPopupViewModel;
@@ -67,20 +86,13 @@ public partial class MainPageViewModel
     }
 
     [RelayCommand]
-    async void Setting()
-    {
-        Console.WriteLine("Settings command clicked!!!");
-    }
-
+    async void Setting() => CanShowSettingPopup = true;
 
     [RelayCommand]
     void About() => CanShowAboutPopup = true;
 
     [RelayCommand]
-    async void Image()
-    {
-        Console.WriteLine("Image command clicked!!!");
-    }
+    async void Image() => CanShowJpgPopup = true;
 
     [RelayCommand]
     async void Print()

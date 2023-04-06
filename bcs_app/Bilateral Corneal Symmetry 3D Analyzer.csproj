@@ -78,12 +78,24 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Popups\JpgPopup.xaml.cs">
+	    <DependentUpon>JpgPopup.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Popups\SettingPopup.xaml.cs">
+	    <DependentUpon>SettingPopup.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Popups\AboutPopup.xaml.cs">
 	    <DependentUpon>AboutPopup.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Popups\JpgPopup.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Popups\SettingPopup.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Popups\AboutPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -4,9 +4,9 @@ using CommunityToolkit.Mvvm.Input;
 namespace Bilateral_Corneal_Symmetry_3D_Analyzer.ViewModels;
 
 [INotifyPropertyChanged]
-public partial class AboutPopupViewModel
+public partial class SettingPopupViewModel
 {
-    public AboutPopupViewModel(Action hideAction)
+    public SettingPopupViewModel(Action hideAction)
     {
         _hideAction = hideAction;
     }
