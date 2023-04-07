@@ -54,6 +54,13 @@ public partial class SettingPopupViewModel : ObservableObject
 
     [RelayCommand]
     void Cancel() => _hideAction?.Invoke();
+    
+    [RelayCommand]
+    async void Save()
+    {
+        //TODO: Save
+        _hideAction?.Invoke();
+    }
 
     private readonly Action _hideAction;
 }
