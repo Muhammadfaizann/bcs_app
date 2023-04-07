@@ -4,9 +4,7 @@ using IronPython.Runtime.Operations;
 using System.Collections.ObjectModel;
 
 namespace Bilateral_Corneal_Symmetry_3D_Analyzer.ViewModels;
-
-[INotifyPropertyChanged]
-public partial class ImportPopupViewModel
+public partial class ImportPopupViewModel : ObservableObject
 {
     public ImportPopupViewModel(Action hideAction)
     {

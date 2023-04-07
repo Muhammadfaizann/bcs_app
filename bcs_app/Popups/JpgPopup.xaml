@@ -4,8 +4,8 @@
       xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
       x:Class="Bilateral_Corneal_Symmetry_3D_Analyzer.Popups.JpgPopup"
       Margin="-10,-10,-10,0"
-      RowDefinitions="*,3*,*"
-      ColumnDefinitions="*,3*,*">
+      RowDefinitions="*,1.5*,*"
+      ColumnDefinitions="*,1.5*,*">
     <Grid x:Name="RootLayout"
           Grid.Row="1"
           Grid.Column="1"
@@ -33,13 +33,36 @@
             <Grid Grid.Row="2"
                   Grid.Column="0"
                   Grid.ColumnSpan="2"
-                  RowDefinitions="Auto,Auto"
-                  ColumnDefinitions="Auto,10,Auto,*">
+                  RowSpacing="10"
+                  RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,*"
+                  ColumnDefinitions="*,10,*">
+                <Label Grid.Row="0"
+                       Grid.Column="0"
+                       Text="Choose location for file saving"
+                       FontSize="Caption" />
+                <Entry Grid.Row="1"
+                       WidthRequest="300"
+                       HorizontalOptions="StartAndExpand"
+                       Text="{Binding DestinationDirectory, Mode=TwoWay}" />
+                <Label Grid.Row="3"
+                       Grid.Column="0"
+                       Text="Please type file name for identification"
+                       FontSize="Caption" />
+                <Entry Grid.Row="4"
+                       Grid.Column="0"
+                       WidthRequest="300"
+                       HorizontalOptions="StartAndExpand"
+                       Text="{Binding FileIdentification, Mode=TwoWay}" />
             </Grid>
             <Grid Grid.Row="3"
                   Grid.Column="1"
                   RowDefinitions="Auto"
-                  ColumnDefinitions="*,Auto">
+                  ColumnDefinitions="*,Auto,10,Auto">
+                <Button Grid.Row="0"
+                        Grid.Column="1"
+                        Text="Save data"
+                        HorizontalOptions="End"
+                        Command="{Binding SaveCommand}" />
                 <Button Grid.Row="0"
                         Grid.Column="3"
                         HorizontalOptions="Start"

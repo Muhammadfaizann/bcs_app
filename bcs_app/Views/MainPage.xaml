@@ -76,7 +76,23 @@
             <Setter Property="FontSize"
                     Value="10" />
             <Setter Property="HeightRequest"
-                    Value="20" />
+                    Value="25" />
+            <Setter Property="MinimumHeightRequest"
+                    Value="24" />
+            <Setter Property="Margin"
+                    Value="0,0,0,0" />
+        </Style>
+        <Style TargetType="Picker">
+            <Setter Property="VerticalOptions"
+                    Value="Center" />
+            <Setter Property="BackgroundColor"
+                    Value="white" />
+            <Setter Property="WidthRequest"
+                    Value="70" />
+            <Setter Property="FontSize"
+                    Value="10" />
+            <Setter Property="HeightRequest"
+                    Value="25" />
             <Setter Property="MinimumHeightRequest"
                     Value="24" />
             <Setter Property="Margin"
@@ -179,8 +195,9 @@
             <Picker Grid.Row="0"
                     Grid.Column="1"
                     VerticalOptions="EndAndExpand"
-                    SelectedItem="{Binding SelectedDisplayItem,Mode=TwoWay}"
-                    ItemsSource="{Binding DisplayItems}" />
+                    ItemDisplayBinding="{Binding .}"
+                    ItemsSource="{Binding DisplayItems}"
+                    SelectedItem="{Binding SelectedDisplayItem,Mode=TwoWay}" />
             <controls:TopMenuButton Grid.Row="0"
                                     Grid.Column="1"
                                     Text="Display"

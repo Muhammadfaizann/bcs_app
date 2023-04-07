@@ -2,9 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 
 namespace Bilateral_Corneal_Symmetry_3D_Analyzer.ViewModels;
-
-[INotifyPropertyChanged]
-public partial class AboutPopupViewModel
+public partial class AboutPopupViewModel : ObservableObject
 {
     public AboutPopupViewModel(Action hideAction)
     {

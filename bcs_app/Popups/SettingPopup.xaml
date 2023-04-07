@@ -4,8 +4,8 @@
       xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
       x:Class="Bilateral_Corneal_Symmetry_3D_Analyzer.Popups.SettingPopup"
       Margin="-10,-10,-10,0"
-      RowDefinitions="*,3*,*"
-      ColumnDefinitions="*,3*,*">
+      RowDefinitions="*,4*,*"
+      ColumnDefinitions="*,4*,*">
     <Grid x:Name="RootLayout"
           Grid.Row="1"
           Grid.Column="1"
@@ -14,7 +14,7 @@
                  Color="White"
                  CornerRadius="5" />
         <Grid Padding="20"
-              RowSpacing="10"
+              RowSpacing="5"
               BackgroundColor="Transparent"
               ColumnSpacing="10"
               RowDefinitions="Auto,1,*,Auto"
@@ -33,8 +33,82 @@
             <Grid Grid.Row="2"
                   Grid.Column="0"
                   Grid.ColumnSpan="2"
-                  RowDefinitions="Auto,Auto"
-                  ColumnDefinitions="Auto,10,Auto,*">
+                  RowSpacing="10"
+                  RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,*"
+                  ColumnDefinitions="*,10,*">
+                <Label Grid.Row="0"
+                       Grid.Column="0"
+                       Text="Zone size"
+                       FontSize="Caption" />
+                <Label Grid.Row="0"
+                       Grid.Column="2"
+                       Text="Symmetry"
+                       FontSize="Caption" />
+                <Picker Grid.Row="1"
+                        Grid.Column="0"
+                        FontSize="Caption"
+                        WidthRequest="300"
+                        HorizontalOptions="StartAndExpand"
+                        ItemsSource="{Binding ZoneItems}"
+                        ItemDisplayBinding="{Binding .}"
+                        SelectedItem="{Binding SelectedZoneItem,Mode=TwoWay}" />
+                <Picker Grid.Row="1"
+                        Grid.Column="2"
+                        FontSize="Caption"
+                        WidthRequest="300"
+                        HorizontalOptions="StartAndExpand"
+                        ItemsSource="{Binding SymmetryItems}"
+                        ItemDisplayBinding="{Binding .}"
+                        SelectedItem="{Binding SelectedSymmetryItem,Mode=TwoWay}" />
+                <Label Grid.Row="2"
+                       Grid.Column="0"
+                       Text="Display"
+                       FontSize="Caption" />
+                <Label Grid.Row="2"
+                       Grid.Column="2"
+                       Text="Default export options including data and directory"
+                       FontSize="Caption" />
+                <Picker Grid.Row="3"
+                        Grid.Column="0"
+                        FontSize="Caption"
+                        WidthRequest="300"
+                        HorizontalOptions="StartAndExpand"
+                        ItemsSource="{Binding DisplayItems}"
+                        ItemDisplayBinding="{Binding .}"
+                        SelectedItem="{Binding SelectedDisplayItem,Mode=TwoWay}" />
+                <Entry Grid.Row="3"
+                       Grid.Column="2"
+                       WidthRequest="300"
+                       HorizontalOptions="StartAndExpand"
+                       Text="{Binding ExportDirectory, Mode=TwoWay}"/>
+                <Label Grid.Row="4"
+                       Grid.Column="0"
+                       Text="Default file names and destination folder when saving JPG"
+                       FontSize="Caption" />
+                <Label Grid.Row="4"
+                       Grid.Column="2"
+                       Text="Default Import folder"
+                       FontSize="Caption" />
+                <Entry Grid.Row="5"
+                       Grid.Column="0"
+                       WidthRequest="300"
+                       HorizontalOptions="StartAndExpand"
+                       Text="{Binding DestinationDirectory, Mode=TwoWay}" />
+                <Entry Grid.Row="5"
+                       Grid.Column="2"
+                       WidthRequest="300"
+                       HorizontalOptions="StartAndExpand"
+                       Text="{Binding ImportDirectory, Mode=TwoWay}" />
+                <Label Grid.Row="6"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="3"
+                       Text="Icon for showing the location of landmarks on colormaps or turning them off"
+                       FontSize="Caption" />
+                <Entry Grid.Row="7"
+                       Grid.Column="0"
+                       WidthRequest="300"
+                       HorizontalOptions="StartAndExpand"
+                       Text="{Binding DefaultIcon, Mode=TwoWay}" />
             </Grid>
             <Grid Grid.Row="3"
                   Grid.Column="1"
