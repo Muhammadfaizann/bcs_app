@@ -11,10 +11,12 @@ public partial class MainPageViewModel : ObservableObject
 
         //TODO: Process files here, both files path exists in the list variable
     }
+
     private void DisplayOptionSelectedCallback(string optionSelected)
     {
         //TODO:
     }
+
     private void JpgPopupCallback(bool result)
     {
         CanShowJpgPopup = false;
