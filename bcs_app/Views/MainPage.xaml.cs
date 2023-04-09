@@ -14,9 +14,5 @@ public partial class MainPage : ContentPage
         Routing.RegisterRoute(nameof(MainPage), typeof(MainPage));
     }
 
-    internal void DisplaySettingsChanged(string selectedOption)
-    {
-        
-    }
     private readonly MainPageViewModel _vm;
 }

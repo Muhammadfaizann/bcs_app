@@ -5,13 +5,19 @@ using CommunityToolkit.Mvvm.Input;
 namespace Bilateral_Corneal_Symmetry_3D_Analyzer.ViewModels;
 public partial class JpgPopupViewModel : ObservableObject
 {
-    public JpgPopupViewModel(Action hideAction, IFolderPicker folderPicker)
+    public JpgPopupViewModel(Action<bool> hideAction, IFolderPicker folderPicker)
     {
         _hideAction = hideAction;
-
-        DestinationDirectory = @"C:\bcs\outputFolder";
         this.folderPicker = folderPicker;
     }
+
+    #region Methods
+    internal void init()
+    {
+        DestinationDirectory = App.ApplicationSettings.DestinationDirectory;
+        FileIdentification = DateTime.Now.ToString("ddMMyyyyhhss");
+    }
+    #endregion
 
     [ObservableProperty]
     string destinationDirectory;
@@ -21,7 +27,7 @@ public partial class JpgPopupViewModel : ObservableObject
 
 
     [RelayCommand]
-    void Cancel() => _hideAction?.Invoke();
+    void Cancel() => _hideAction?.Invoke(false);
 
     [RelayCommand]
     async Task Browse(CancellationToken cancellationToken)
@@ -35,10 +41,15 @@ public partial class JpgPopupViewModel : ObservableObject
     [RelayCommand]
     async void Save()
     {
-        //TODO: Save
-        _hideAction?.Invoke();
+        if (string.IsNullOrWhiteSpace(FileIdentification))
+        {
+            await Application.Current.MainPage.DisplayAlert("Error", "Identification is missing?", "Ok");
+            return;
+        }
+
+        _hideAction?.Invoke(true);
     }
 
-    private readonly Action _hideAction;
+    private readonly Action<bool> _hideAction;
     private readonly IFolderPicker folderPicker;
 }

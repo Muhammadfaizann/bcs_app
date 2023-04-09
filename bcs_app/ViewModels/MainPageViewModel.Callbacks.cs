@@ -1,6 +1,4 @@
-﻿using CommunityToolkit.Maui.Storage;
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace Bilateral_Corneal_Symmetry_3D_Analyzer.ViewModels;
 public partial class MainPageViewModel : ObservableObject
@@ -15,6 +13,11 @@ public partial class MainPageViewModel : ObservableObject
     }
     private void DisplayOptionSelectedCallback(string optionSelected)
     {
+        //TODO:
+    }
+    private void JpgPopupCallback(bool result)
+    {
+        CanShowJpgPopup = false;
         //TODO:
     }
 }

@@ -13,7 +13,11 @@ public partial class MainPageViewModel : ObservableObject
         AboutPopupViewModel = new AboutPopupViewModel(() => CanShowAboutPopup = false);
 
         SettingPopupViewModel = new SettingPopupViewModel(() => CanShowSettingPopup = false, folderPicker);
-        JpgPopupViewModel = new JpgPopupViewModel(() => CanShowJpgPopup = false, folderPicker);
+        JpgPopupViewModel = new JpgPopupViewModel(JpgPopupCallback, folderPicker);
+
+        LeftImage = ImageSource.FromFile("ae_left_img.png");
+        MiddleImage = ImageSource.FromFile("ae_left_img.png");
+        RightImage = ImageSource.FromFile("ae_img_3.png");
     }
 
     #region Methods
@@ -52,6 +56,15 @@ public partial class MainPageViewModel : ObservableObject
     [ObservableProperty]
     AboutPopupViewModel aboutPopupViewModel;
 
+    [ObservableProperty]
+    ImageSource leftImage;
+
+    [ObservableProperty]
+    ImageSource middleImage;
+
+    [ObservableProperty]
+    ImageSource rightImage;
+
     private string _selectedDisplayItem;
     public string SelectedDisplayItem
     {
@@ -61,12 +74,7 @@ public partial class MainPageViewModel : ObservableObject
             _selectedDisplayItem = value;
             OnPropertyChanged();
 
-            //Pass selected option to main page, it is part of the requirements otherwise we have the selected option part of this vm anyway
-            if (Application.Current.MainPage is AppShell appShell)
-            {
-                if (appShell.CurrentPage is MainPage mp)
-                    mp.DisplaySettingsChanged(value);
-            }
+            DisplayOptionSelectedCallback(value);
         }
     }
     #endregion
@@ -92,7 +100,11 @@ public partial class MainPageViewModel : ObservableObject
     void About() => CanShowAboutPopup = true;
 
     [RelayCommand]
-    async void Image() => CanShowJpgPopup = true;
+    async void Image()
+    {
+        JpgPopupViewModel.init();
+        CanShowJpgPopup = true;
+    }
 
     [RelayCommand]
     async void Print()

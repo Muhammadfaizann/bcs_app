@@ -274,7 +274,7 @@
                         <Image Aspect="Fill"
                                HorizontalOptions="Center"
                                VerticalOptions="Center"
-                               Source="ae_left_img.png"></Image>
+                               Source="{Binding LeftImage}"></Image>
                     </Frame>
                     <!--row 0 col 1-->
                     <Frame Grid.Column="1"
@@ -283,7 +283,7 @@
                         <Image Aspect="Fill"
                                HorizontalOptions="Center"
                                VerticalOptions="Center"
-                               Source="ae_left_img.png"></Image>
+                               Source="{Binding MiddleImage}"></Image>
                     </Frame>
                     <!--row 1 col 0-->
                     <Grid Grid.Column="0"
@@ -657,7 +657,7 @@
                            Grid.Row="1"
                            CornerRadius="0"
                            Padding="0">
-                        <Image Source="ae_img_3.png"></Image>
+                        <Image Source="{Binding RightImage}"></Image>
                         <!--HeightRequest="550"
                            WidthRequest="490"
                            HorizontalOptions="Center"
