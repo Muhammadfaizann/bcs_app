@@ -35,13 +35,13 @@
                   Grid.ColumnSpan="2"
                   RowSpacing="10"
                   RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,*"
-                  ColumnDefinitions="*,10,*">
+                  ColumnDefinitions="Auto,Auto,*,Auto,Auto,*">
                 <Label Grid.Row="0"
                        Grid.Column="0"
                        Text="Zone size"
                        FontSize="Caption" />
                 <Label Grid.Row="0"
-                       Grid.Column="2"
+                       Grid.Column="3"
                        Text="Symmetry"
                        FontSize="Caption" />
                 <Picker Grid.Row="1"
@@ -53,7 +53,7 @@
                         ItemDisplayBinding="{Binding .}"
                         SelectedItem="{Binding SelectedZoneItem,Mode=TwoWay}" />
                 <Picker Grid.Row="1"
-                        Grid.Column="2"
+                        Grid.Column="3"
                         FontSize="Caption"
                         WidthRequest="300"
                         HorizontalOptions="StartAndExpand"
@@ -65,7 +65,7 @@
                        Text="Display"
                        FontSize="Caption" />
                 <Label Grid.Row="2"
-                       Grid.Column="2"
+                       Grid.Column="3"
                        Text="Default export options including data and directory"
                        FontSize="Caption" />
                 <Picker Grid.Row="3"
@@ -77,16 +77,27 @@
                         ItemDisplayBinding="{Binding .}"
                         SelectedItem="{Binding SelectedDisplayItem,Mode=TwoWay}" />
                 <Entry Grid.Row="3"
-                       Grid.Column="2"
+                       Grid.Column="3"
                        WidthRequest="300"
                        HorizontalOptions="StartAndExpand"
                        Text="{Binding ExportDirectory, Mode=TwoWay}"/>
+                <Button Grid.Row="3"
+                        Grid.Column="4"
+                        Padding="10,0"
+                        Margin="10,0,0,0"
+                        BorderColor="Transparent"
+                        BorderWidth="0"
+                        HeightRequest="30"
+                        BackgroundColor="Gray"
+                        Text="Browse"
+                        HorizontalOptions="StartAndExpand"
+                        Command="{Binding BrowseExportDirectoryCommand}"/>
                 <Label Grid.Row="4"
                        Grid.Column="0"
-                       Text="Default file names and destination folder when saving JPG"
+                       Text="“Image” folder of the application"
                        FontSize="Caption" />
                 <Label Grid.Row="4"
-                       Grid.Column="2"
+                       Grid.Column="3"
                        Text="Default Import folder"
                        FontSize="Caption" />
                 <Entry Grid.Row="5"
@@ -94,14 +105,36 @@
                        WidthRequest="300"
                        HorizontalOptions="StartAndExpand"
                        Text="{Binding DestinationDirectory, Mode=TwoWay}" />
+                <Button Grid.Row="5"
+                        Grid.Column="1"
+                        Padding="10,0"
+                        Margin="10,0,0,0"
+                        BorderColor="Transparent"
+                        BorderWidth="0"
+                        HeightRequest="30"
+                        BackgroundColor="Gray"
+                        Text="Browse"
+                        HorizontalOptions="StartAndExpand"
+                        Command="{Binding BrowseDestinationDirectoryCommand}"/>
                 <Entry Grid.Row="5"
-                       Grid.Column="2"
+                       Grid.Column="3"
                        WidthRequest="300"
                        HorizontalOptions="StartAndExpand"
                        Text="{Binding ImportDirectory, Mode=TwoWay}" />
+                <Button Grid.Row="5"
+                        Grid.Column="4"
+                        Padding="10,0"
+                        Margin="10,0,0,0"
+                        BorderColor="Transparent"
+                        BorderWidth="0"
+                        HeightRequest="30"
+                        BackgroundColor="Gray"
+                        Text="Browse"
+                        HorizontalOptions="StartAndExpand"
+                        Command="{Binding BrowseImportDirectoryCommand}"/>
                 <Label Grid.Row="6"
                        Grid.Column="0"
-                       Grid.ColumnSpan="3"
+                       Grid.ColumnSpan="5"
                        Text="Icon for showing the location of landmarks on colormaps or turning them off"
                        FontSize="Caption" />
                 <Entry Grid.Row="7"
@@ -109,11 +142,22 @@
                        WidthRequest="300"
                        HorizontalOptions="StartAndExpand"
                        Text="{Binding DefaultIcon, Mode=TwoWay}" />
+                <Button Grid.Row="7"
+                        Grid.Column="1"
+                        Padding="10,0"
+                        Margin="10,0,0,0"
+                        BorderColor="Transparent"
+                        BorderWidth="0"
+                        HeightRequest="30"
+                        BackgroundColor="Gray"
+                        Text="Browse"
+                        HorizontalOptions="StartAndExpand"
+                        Command="{Binding BrowseDefaultIconCommand}"/>
             </Grid>
             <Grid Grid.Row="3"
                   Grid.Column="1"
                   RowDefinitions="Auto"
-                  ColumnDefinitions="*,Auto">
+                  ColumnDefinitions="*,Auto,10,Auto">
                 <Button Grid.Row="0"
                         Grid.Column="1"
                         Text="Save"

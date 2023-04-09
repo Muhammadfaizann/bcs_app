@@ -1,18 +1,19 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Maui.Storage;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
 namespace Bilateral_Corneal_Symmetry_3D_Analyzer.ViewModels;
 public partial class MainPageViewModel : ObservableObject
 {
-    public MainPageViewModel()
+    public MainPageViewModel(IFolderPicker folderPicker)
     {
         DisplayItems = new List<string>() { "AE", "PE", "TH" };
 
-        ImportPopupViewModel = new ImportPopupViewModel(() => CanShowImportPopup = false);
+        ImportPopupViewModel = new ImportPopupViewModel(ExamsPopupCallback, folderPicker);
         AboutPopupViewModel = new AboutPopupViewModel(() => CanShowAboutPopup = false);
 
-        SettingPopupViewModel = new SettingPopupViewModel(() => CanShowSettingPopup = false);
-        JpgPopupViewModel = new JpgPopupViewModel(() => CanShowJpgPopup = false);
+        SettingPopupViewModel = new SettingPopupViewModel(() => CanShowSettingPopup = false, folderPicker);
+        JpgPopupViewModel = new JpgPopupViewModel(() => CanShowJpgPopup = false, folderPicker);
     }
 
     #region Methods
@@ -74,7 +75,7 @@ public partial class MainPageViewModel : ObservableObject
     [RelayCommand]
     void Exam()
     {
-        ImportPopupViewModel.init();
+        ImportPopupViewModel.init(SettingPopupViewModel.ImportDirectory);
         CanShowImportPopup = true;
     }
 

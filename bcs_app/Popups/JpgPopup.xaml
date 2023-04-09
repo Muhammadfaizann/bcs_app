@@ -41,16 +41,27 @@
                        Text="Choose location for file saving"
                        FontSize="Caption" />
                 <Entry Grid.Row="1"
-                       WidthRequest="300"
+                       WidthRequest="250"
                        HorizontalOptions="StartAndExpand"
                        Text="{Binding DestinationDirectory, Mode=TwoWay}" />
+                <Button Grid.Row="1"
+                        Grid.Column="2"
+                        Padding="10,0"
+                        Margin="10,0,0,0"
+                        BorderColor="Transparent"
+                        BorderWidth="0"
+                        HeightRequest="30"
+                        BackgroundColor="Gray"
+                        Text="Change folder"
+                        HorizontalOptions="StartAndExpand"
+                        Command="{Binding BrowseCommand}" />
                 <Label Grid.Row="3"
                        Grid.Column="0"
                        Text="Please type file name for identification"
                        FontSize="Caption" />
                 <Entry Grid.Row="4"
                        Grid.Column="0"
-                       WidthRequest="300"
+                       WidthRequest="250"
                        HorizontalOptions="StartAndExpand"
                        Text="{Binding FileIdentification, Mode=TwoWay}" />
             </Grid>

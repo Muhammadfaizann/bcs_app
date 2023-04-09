@@ -1,5 +1,6 @@
-﻿namespace Bilateral_Corneal_Symmetry_3D_Analyzer;
+﻿using Bilateral_Corneal_Symmetry_3D_Analyzer.ViewModels;
 
+namespace Bilateral_Corneal_Symmetry_3D_Analyzer;
 public partial class App : Application
 {
     const int WindowWidth = 400;
@@ -8,7 +9,8 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new AppShell();
+        ApplicationSettings = new ApplicationSettings();
+        MainPage = new AppShell();
 	}
 
     protected override Window CreateWindow(IActivationState activationState)
@@ -23,4 +25,6 @@ public partial class App : Application
 
         return window;
     }
+
+    public static ApplicationSettings ApplicationSettings;
 }

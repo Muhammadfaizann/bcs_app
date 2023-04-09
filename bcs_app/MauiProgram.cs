@@ -1,6 +1,8 @@
 ﻿using APES.UI.XF;
 using Bilateral_Corneal_Symmetry_3D_Analyzer.Popups;
 using Bilateral_Corneal_Symmetry_3D_Analyzer.ViewModels;
+using CommunityToolkit.Maui;
+using CommunityToolkit.Maui.Storage;
 using Microsoft.Extensions.Logging;
 
 namespace Bilateral_Corneal_Symmetry_3D_Analyzer;
@@ -20,9 +22,10 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             })
+            .UseMauiCommunityToolkit()
             .ConfigureContextMenuContainer();
 
-
+        builder.Services.AddSingleton<IFolderPicker>(FolderPicker.Default);
         builder.Services.AddSingleton<MainPageViewModel>();
         builder.Services.AddTransient<MainPage>();
         builder.Services.AddTransient<ImportPopup>();

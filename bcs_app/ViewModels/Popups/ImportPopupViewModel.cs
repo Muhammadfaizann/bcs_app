@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Maui.Storage;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using IronPython.Runtime.Operations;
 using System.Collections.ObjectModel;
@@ -6,7 +7,7 @@ using System.Collections.ObjectModel;
 namespace Bilateral_Corneal_Symmetry_3D_Analyzer.ViewModels;
 public partial class ImportPopupViewModel : ObservableObject
 {
-    public ImportPopupViewModel(Action hideAction)
+    public ImportPopupViewModel(Action<List<Examination>> hideAction, IFolderPicker folderPicker)
     {
         _hideAction = hideAction;
 
@@ -14,11 +15,13 @@ public partial class ImportPopupViewModel : ObservableObject
 
         Patients = new ObservableCollection<Patient>();
         Examinations = new ObservableCollection<Examination>();
+        this.folderPicker = folderPicker;
     }
 
     #region Methods
-    internal void init()
+    internal void init(string defaultImportPath)
     {
+        DataFolderPath = defaultImportPath;
         Patients = new System.Collections.ObjectModel.ObservableCollection<Patient>();
         Examinations = new System.Collections.ObjectModel.ObservableCollection<Examination>();
     }
@@ -51,9 +54,29 @@ public partial class ImportPopupViewModel : ObservableObject
 
     #region Commands
     [RelayCommand]
-    void Load()
+    async Task Browse(CancellationToken cancellationToken)
     {
+        var result = await folderPicker.PickAsync(cancellationToken);
+        if (!result.IsSuccessful)
+            return;
+
+        DataFolderPath = result.Folder.Path;
+    }
+    [RelayCommand]
+    async Task Load()
+    {
+        if (!Directory.Exists(DataFolderPath))
+        {
+            await Application.Current.MainPage.DisplayAlert("Error", "Folder does not exists?", "Ok");
+            return;
+        }
+
         var dataFiles = Directory.EnumerateFiles(DataFolderPath);
+        if (!dataFiles.Any())
+        {
+            await Application.Current.MainPage.DisplayAlert("Error", "Folder does not contain any files?", "Ok");
+            return;
+        }
 
         var listOfPatients = new List<Patient>();
         foreach (var dataFile in dataFiles)
@@ -90,7 +113,7 @@ public partial class ImportPopupViewModel : ObservableObject
     }
 
     [RelayCommand]
-    void Cancel() => _hideAction?.Invoke();
+    void Cancel() => _hideAction?.Invoke(null);
 
     [RelayCommand]
     async void Import()
@@ -122,12 +145,12 @@ public partial class ImportPopupViewModel : ObservableObject
                 return;
         }
 
-        //TODO: Pass the selected object back
-        _hideAction?.Invoke();
+        _hideAction?.Invoke(SelectedExaminations.ToList());
     }
     #endregion
 
-    private readonly Action _hideAction;
+    private readonly Action<List<Examination>> _hideAction;
+    private readonly IFolderPicker folderPicker;
 }
 public class Patient
 {

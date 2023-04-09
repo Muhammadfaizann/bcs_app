@@ -34,7 +34,7 @@
                   Grid.Column="0"
                   Grid.ColumnSpan="2"
                   RowDefinitions="Auto,Auto"
-                  ColumnDefinitions="Auto,10,Auto,*">
+                  ColumnDefinitions="Auto,10,Auto,10,Auto,*">
                 <Label Grid.Row="0"
                        Grid.Column="0"
                        Text="Folder path"
@@ -48,6 +48,15 @@
                        HorizontalOptions="StartAndExpand" />
                 <Button Grid.Row="1"
                         Grid.Column="2"
+                        Padding="10,0"
+                        BorderColor="Transparent"
+                        BorderWidth="0"
+                        HeightRequest="30"
+                        BackgroundColor="Gray"
+                        Text="Change folder"
+                        Command="{Binding BrowseCommand}" />
+                <Button Grid.Row="1"
+                        Grid.Column="4"
                         Padding="10,0"
                         BorderColor="Transparent"
                         BorderWidth="0"
