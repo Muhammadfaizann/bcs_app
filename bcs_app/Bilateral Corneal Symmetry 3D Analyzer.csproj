@@ -80,6 +80,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Content Include="MyImages\ae_img_3.png" />
+	  <Content Include="MyImages\ae_left_img.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="MyImages\ae_right_img.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <Compile Update="Popups\JpgPopup.xaml.cs">
 	    <DependentUpon>JpgPopup.xaml</DependentUpon>
 	  </Compile>

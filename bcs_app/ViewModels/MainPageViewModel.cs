@@ -15,9 +15,9 @@ public partial class MainPageViewModel : ObservableObject
         SettingPopupViewModel = new SettingPopupViewModel(() => CanShowSettingPopup = false, folderPicker);
         JpgPopupViewModel = new JpgPopupViewModel(JpgPopupCallback, folderPicker);
 
-        LeftImage = ImageSource.FromFile("ae_left_img.png");
-        MiddleImage = ImageSource.FromFile("ae_left_img.png");
-        RightImage = ImageSource.FromFile("ae_img_3.png");
+        LeftImage = ImageSource.FromFile("MyImages\\ae_left_img.png");
+        MiddleImage = ImageSource.FromFile("MyImages\\ae_left_img.png");
+        RightImage = ImageSource.FromFile("MyImages\\ae_img_3.png");
     }
 
     #region Methods
@@ -107,9 +107,6 @@ public partial class MainPageViewModel : ObservableObject
     }
 
     [RelayCommand]
-    async void Print()
-    {
-        Console.WriteLine("Print command clicked!!!");
-    }
+    async void Print() => PrintScreen();
     #endregion
 }
