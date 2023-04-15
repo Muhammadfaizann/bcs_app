@@ -657,7 +657,11 @@
                            Grid.Row="1"
                            CornerRadius="0"
                            Padding="0">
-                        <Image Source="{Binding RightImage}"></Image>
+                        <Image x:Name="RightImage" Source="{Binding RightImage}">
+                            <Image.GestureRecognizers>
+                                <PointerGestureRecognizer PointerMoved ="OnPointerMoved" PointerExited="OnPointerExited"/>
+                            </Image.GestureRecognizers>
+                        </Image>
                         <!--HeightRequest="550"
                            WidthRequest="490"
                            HorizontalOptions="Center"
@@ -1141,37 +1145,37 @@
                                     <Label Text="X:" />
                                     <Entry  IsReadOnly="True"
                                             WidthRequest="15"
-                                            Margin="0,0,0,0" />
+                                            Margin="0,0,0,0" x:Name="XText"/>
                                     <Label Text="Y:" />
                                     <Entry  IsReadOnly="True"
-                                            WidthRequest="15" />
+                                            WidthRequest="15" x:Name="YText"/>
                                 </HorizontalStackLayout>
                                 <HorizontalStackLayout Spacing="30"
                                                        HorizontalOptions="Center">
                                     <Label Text="Point:" />
                                     <Entry  IsReadOnly="True"
-                                            WidthRequest="60" />
+                                            WidthRequest="60" x:Name="PointText"/>
                                 </HorizontalStackLayout>
                                 <HorizontalStackLayout Spacing="6"
                                                        HorizontalOptions="Center">
                                     <Label Text="2mm Avg:"
                                            WidthRequest="56" />
                                     <Entry  IsReadOnly="True"
-                                            WidthRequest="60" />
+                                            WidthRequest="60" x:Name="AverageText"/>
                                 </HorizontalStackLayout>
                                 <HorizontalStackLayout Spacing="6"
                                                        HorizontalOptions="Center">
                                     <Label Text="2mm max:"
                                            WidthRequest="56" />
                                     <Entry  IsReadOnly="True"
-                                            WidthRequest="60" />
+                                            WidthRequest="60" x:Name="MaxText"/>
                                 </HorizontalStackLayout>
                                 <HorizontalStackLayout Spacing="6"
                                                        HorizontalOptions="Center">
                                     <Label Text="2mm min:"
                                            WidthRequest="56" />
                                     <Entry  IsReadOnly="True"
-                                            WidthRequest="60" />
+                                            WidthRequest="60" x:Name="MinText"/>
                                 </HorizontalStackLayout>
                             </VerticalStackLayout>
                         </Grid>
