@@ -22,13 +22,16 @@ public partial class MainPage : ContentPage
     #region RightImage code
     private List<Point> _allPoints;
     private IReadOnlyList<List<int>> _differenceMatrix;
+    private double _scaleX;
+    private double _scaleY;
 
     private async void OnLoaded(object sender, EventArgs e)
     {
         var size = await ReadJson();
         InitializePointList(size);
-        RightImage.HeightRequest = size;
-        RightImage.WidthRequest = size;
+
+        _scaleX = GetScaleFactor(RightImage.Width, size);
+        _scaleY = GetScaleFactor(RightImage.Height, size);
     }
     private void InitializePointList(int size)
     {
@@ -42,18 +45,30 @@ public partial class MainPage : ContentPage
         }
     }
 
+
+    private double GetScaleFactor(double originalSize, double targetSize)
+    {
+        return targetSize / originalSize;
+    }
+
+    private Point ScalePoint(Point originalPoint, double scaleX, double scaleY)
+    {
+        return new Point(Math.Floor(originalPoint.X * scaleX), Math.Ceiling((RightImage.Height - originalPoint.Y) * scaleY));
+    }
+
+
     private void OnPointerMoved(object sender, PointerEventArgs e)
     {
         var pos = e.GetPosition(RightImage).Value;
-        var invertedY = RightImage.Height - pos.Y;
+        pos = ScalePoint(pos, _scaleX, _scaleY);
 
         XText.Text = Convert.ToString(pos.X);
-        YText.Text = Convert.ToString(invertedY);
+        YText.Text = Convert.ToString(pos.Y);
 
         var average = 0.0;
         var min = 0.0;
         var max = 0.0;
-
+        double pointValue = 0;
         var surroundingPoints = new List<Point>();
 
         foreach (Point point in _allPoints)
@@ -62,27 +77,29 @@ public partial class MainPage : ContentPage
             var yScaled = point.Y * 0.1;
 
             var distance =
-                Math.Sqrt(Math.Pow(xScaled - (pos.X * 0.1), 2) + Math.Pow(yScaled - (invertedY * 0.1), 2));
+                Math.Sqrt(Math.Pow(xScaled - (pos.X * 0.1), 2) + Math.Pow(yScaled - (pos.Y * 0.1), 2));
 
             if (distance <= 1)
             {
                 surroundingPoints.Add(point);
-                average = CalculateMinMaxAndAverage(point, invertedY, average, ref min, ref max).Average;
+                average = CalculateMinMaxAndAverage(point, pos.Y, average, ref min, ref max).Average;
+            }
+
+            if (point.X == pos.X && point.Y == pos.Y)
+            {
+                surroundingPoints.Add(point);
+                var currentPointResult = CalculateMinMaxAndAverage(point, pos.Y, average, ref min, ref max);
+                pointValue = currentPointResult.Value;
+                average = currentPointResult.Average;
             }
         }
-
-        var currentPoint = new Point(pos.X, invertedY);
-
-        surroundingPoints.Add(currentPoint);
-        var result = CalculateMinMaxAndAverage(currentPoint, invertedY, average, ref min, ref max);
-        average = result.Average;
 
         if (surroundingPoints.Any())
         {
             average /= surroundingPoints.Count;
         }
 
-        UpdateTextBoxes(min, max, average, result.Value);
+        UpdateTextBoxes(min, max, average, pointValue);
     }
 
     private void UpdateTextBoxes(double min, double max, double average, double value)
