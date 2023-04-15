@@ -84,14 +84,6 @@ public partial class MainPage : ContentPage
                 surroundingPoints.Add(point);
                 average = CalculateMinMaxAndAverage(point, pos.Y, average, ref min, ref max).Average;
             }
-
-            if (point.X == pos.X && point.Y == pos.Y)
-            {
-                surroundingPoints.Add(point);
-                var currentPointResult = CalculateMinMaxAndAverage(point, pos.Y, average, ref min, ref max);
-                pointValue = currentPointResult.Value;
-                average = currentPointResult.Average;
-            }
         }
 
         if (surroundingPoints.Any())
