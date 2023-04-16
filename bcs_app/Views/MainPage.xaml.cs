@@ -139,18 +139,17 @@ public partial class MainPage : ContentPage
         var json = await ReadTextFile("Json/data.json");
         var dataPoint = JsonConvert.DeserializeObject<DataPoint>(json);
         _differenceMatrix = dataPoint.Exam3.DifferenceMatrix;
-
         return _differenceMatrix.Count;
     }
 
     private double? TryGetValue(int x, int y)
     {
-        if (x < _differenceMatrix.Count)
+        if (y < _differenceMatrix.Count)
         {
-            var value = _differenceMatrix[x];
-            if (y < value.Count)
+            var value = _differenceMatrix[y];
+            if (x < value.Count)
             {
-                return value[y];
+                return value[x];
             }
         }
 
