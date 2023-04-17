@@ -53,7 +53,7 @@ public partial class MainPage : ContentPage
 
     private Point ScalePoint(Point originalPoint, double scaleX, double scaleY)
     {
-        return new Point(Math.Floor(originalPoint.X * scaleX), Math.Ceiling((RightImage.Height - originalPoint.Y) * scaleY));
+        return new Point(Math.Floor(originalPoint.X * scaleX), Math.Ceiling((RightImage.Height - 14 - originalPoint.Y) * scaleY));
     }
 
 
@@ -62,8 +62,8 @@ public partial class MainPage : ContentPage
         var pos = e.GetPosition(RightImage).Value;
         pos = ScalePoint(pos, _scaleX, _scaleY);
 
-        XText.Text = Convert.ToString(pos.X);
-        YText.Text = Convert.ToString(pos.Y);
+        XText.Text = Convert.ToString((int)(pos.X * 0.1));
+        YText.Text = Convert.ToString((int)(pos.Y * 0.1));
 
         var average = 0.0;
         var min = 0.0;
