@@ -53,7 +53,8 @@ public partial class MainPage : ContentPage
 
     private Point ScalePoint(Point originalPoint, double scaleX, double scaleY)
     {
-        return new Point(Math.Floor(originalPoint.X * scaleX), Math.Ceiling((RightImage.Height - 20 - originalPoint.Y) * scaleY));
+        //return new Point(Math.Floor(originalPoint.X * scaleX), Math.Ceiling((RightImage.Height - 20 - originalPoint.Y) * scaleY));
+        return new Point(Math.Floor(originalPoint.X * scaleX), Math.Ceiling((RightImage.Height - originalPoint.Y) * scaleY));
     }
 
 
