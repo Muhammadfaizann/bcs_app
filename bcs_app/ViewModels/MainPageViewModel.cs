@@ -1,12 +1,17 @@
 ﻿using CommunityToolkit.Maui.Storage;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using System.ComponentModel;
+
 
 namespace Bilateral_Corneal_Symmetry_3D_Analyzer.ViewModels;
 public partial class MainPageViewModel : ObservableObject
 {
+   
+
     public MainPageViewModel(IFolderPicker folderPicker)
     {
+        
         DisplayItems = new List<string>() { "AE", "PE", "TH" };
 
         ImportPopupViewModel = new ImportPopupViewModel(ExamsPopupCallback, folderPicker);
@@ -14,18 +19,21 @@ public partial class MainPageViewModel : ObservableObject
 
         SettingPopupViewModel = new SettingPopupViewModel(() => CanShowSettingPopup = false, folderPicker);
         JpgPopupViewModel = new JpgPopupViewModel(JpgPopupCallback, folderPicker);
-
+        FirstName = App.ApplicationNames.FirstName;
         LeftImage = ImageSource.FromFile("MyImages\\ae_left_img.png");
         MiddleImage = ImageSource.FromFile("MyImages\\ae_left_img.png");
         RightImage = ImageSource.FromFile("MyImages\\ae_img_3.png");
     }
 
-    #region Methods
-    void HideImportView() => CanShowImportPopup = false;
+    
+        #region Methods
+        void HideImportView() => CanShowImportPopup = false;
     void HideAboutView() => CanShowAboutPopup = false;
 
     void HideJpgView() => CanShowJpgPopup = false;
     void HideSettingView() => CanShowSettingPopup = false;
+
+    
     #endregion
 
     #region Properties
@@ -65,6 +73,13 @@ public partial class MainPageViewModel : ObservableObject
     [ObservableProperty]
     ImageSource rightImage;
 
+    [ObservableProperty]
+    string firstName;
+
+    [ObservableProperty]
+    string lastName;
+
+
     private string _selectedDisplayItem;
     public string SelectedDisplayItem
     {
@@ -102,11 +117,27 @@ public partial class MainPageViewModel : ObservableObject
     [RelayCommand]
     async void Image()
     {
+        App.ApplicationNames.FirstName = FirstName;
+        App.ApplicationNames.LastName = LastName;
         JpgPopupViewModel.init();
         CanShowJpgPopup = true;
+
     }
 
     [RelayCommand]
     async void Print() => PrintScreen();
     #endregion
+
+}
+
+public class ApplicationNames
+{
+    public ApplicationNames()
+    {
+        FirstName = "";
+        LastName = "";
+    }
+
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
 }

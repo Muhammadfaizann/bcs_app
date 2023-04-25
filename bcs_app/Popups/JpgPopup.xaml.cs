@@ -16,6 +16,6 @@ public partial class JpgPopup : Grid
 
         base.OnBindingContextChanged();
     }
-
+   
     JpgPopupViewModel _vm;
 }

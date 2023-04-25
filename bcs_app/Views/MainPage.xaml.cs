@@ -1,30 +1,36 @@
 ﻿using Bilateral_Corneal_Symmetry_3D_Analyzer.Json;
+using Bilateral_Corneal_Symmetry_3D_Analyzer.Popups;
 using Bilateral_Corneal_Symmetry_3D_Analyzer.ViewModels;
+using CommunityToolkit.Mvvm.ComponentModel;
 using Newtonsoft.Json;
 
 namespace Bilateral_Corneal_Symmetry_3D_Analyzer;
 public partial class MainPage : ContentPage
 {
     public int label_font_size = 10;
-
+    DataService dataService = new DataService();
+    
     public MainPage(MainPageViewModel vm)
     {
         _vm = vm;
         BindingContext = _vm;
-
+        
         InitializeComponent();
         Routing.RegisterRoute(nameof(MainPage), typeof(MainPage));
         Loaded +=  OnLoaded;
+
+
     }
 
     private readonly MainPageViewModel _vm;
 
+    
     #region RightImage code
     private List<Point> _allPoints;
     private IReadOnlyList<List<int>> _differenceMatrix;
     private double _scaleX;
     private double _scaleY;
-
+    
     private async void OnLoaded(object sender, EventArgs e)
     {
         var size = await ReadJson();

@@ -80,6 +80,11 @@
                         Text="Cancel"
                         BackgroundColor="Gray"
                         Command="{Binding CancelCommand}" />
+                <Button
+                x:Name="TestBtn"
+                Text="{Binding FirstName}"
+                BackgroundColor="Pink"
+                HorizontalOptions="Center" />
             </Grid>
         </Grid>
     </Grid>

@@ -8,8 +8,9 @@ public partial class App : Application
     public App()
 	{
 		InitializeComponent();
-
+ 
         ApplicationSettings = new ApplicationSettings();
+        ApplicationNames = new ApplicationNames();
         MainPage = new AppShell();
 	}
 
@@ -25,6 +26,6 @@ public partial class App : Application
 
         return window;
     }
-
     public static ApplicationSettings ApplicationSettings;
+    public static ApplicationNames ApplicationNames;
 }

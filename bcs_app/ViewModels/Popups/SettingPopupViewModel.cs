@@ -71,6 +71,8 @@ public partial class SettingPopupViewModel : ObservableObject
         _hideAction?.Invoke();
     }
 
+    
+
     [RelayCommand]
     async Task BrowseExportDirectory(CancellationToken cancellationToken)
     {
@@ -124,6 +126,7 @@ public class ApplicationSettings
         SelectedDisplayItem = "AE";
         SelectedSymmetryItem = "direct";
         SelectedZoneItem = "6";
+
     }
     public string ImportDirectory { get; set; }
     public string ExportDirectory { get; set; }
