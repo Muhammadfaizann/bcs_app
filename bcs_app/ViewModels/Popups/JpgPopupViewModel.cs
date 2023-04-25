@@ -74,7 +74,7 @@ public partial class JpgPopupViewModel : ObservableObject
             String filepath =  String.Format ("{0}\\{1}.jpg",DestinationDirectory,FileIdentification);
             File.WriteAllBytes(filepath, memoryStream.ToArray());
         }
-    } 
+    }
     private readonly Action<bool> _hideAction;
     private readonly IFolderPicker folderPicker;
 
