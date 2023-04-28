@@ -61,6 +61,8 @@ public partial class ImportPopupViewModel : ObservableObject
             return;
 
         DataFolderPath = result.Folder.Path;
+
+        //await Load();
     }
     [RelayCommand]
     async Task Load()
