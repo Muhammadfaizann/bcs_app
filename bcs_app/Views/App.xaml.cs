@@ -8,18 +8,23 @@ public partial class App : Application
     public App()
 	{
 		InitializeComponent();
- 
         ApplicationSettings = new ApplicationSettings();
         ApplicationNames = new ApplicationNames();
         MainPage = new AppShell();
 	}
-
+    
     protected override Window CreateWindow(IActivationState activationState)
     {
         var window = base.CreateWindow(activationState);
 
-        const int newWidth = 1320;
+        const int newWidth = 1400;
         const int newHeight = 740;
+
+        const int xPosition = 250;
+        const int yPosition = 250;
+
+        window.X = xPosition;
+        window.Y = yPosition;
 
         window.Width = newWidth;
         window.Height = newHeight;

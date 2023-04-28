@@ -256,15 +256,16 @@
                 </controls:TopMenuButton.ImageSource>
             </controls:TopMenuButton>
         </Grid>
-        <ScrollView Grid.Row="1">
-            <Grid RowDefinitions="*"
+
+            <Grid Grid.Row="1"
+                  RowDefinitions="*"
                   Padding="0"
                   ColumnDefinitions="1.6*, *"
                   ColumnSpacing="4"
                   BackgroundColor="{StaticResource Gray500}">
                 <!--left column-->
                 <Grid Grid.Column="0"
-                      RowDefinitions="336, 210, 100"
+                      RowDefinitions="336, 210, 120"
                       ColumnDefinitions="*, *"
                       ColumnSpacing="4"
                       RowSpacing="2">
@@ -292,8 +293,8 @@
                           BackgroundColor="{StaticResource Gray200}"
                           ColumnDefinitions="170,120,100"
                           RowDefinitions="*,*,*,*,*,*,*,*"
-                          ColumnSpacing="20"
-                          Padding="6,2">
+                          Padding="10"
+                          ColumnSpacing="20">
                         <HorizontalStackLayout Grid.Row="0"
                                                Spacing="10"
                                                VerticalOptions="Center">
@@ -425,10 +426,10 @@
                     <Grid Grid.Column="1"
                           Grid.Row="1"
                           BackgroundColor="{StaticResource Gray200}"
-                          ColumnDefinitions="170,120,00"
+                          ColumnDefinitions="170,120,100"
                           RowDefinitions="*,*,*,*,*,*,*,*"
                           ColumnSpacing="20"
-                          Padding="6,2">
+                          Padding="10">
                         <HorizontalStackLayout Grid.Row="0"
                                                Spacing="10"
                                                VerticalOptions="Center">
@@ -553,7 +554,7 @@
                     <Grid Grid.Row="2"
                           Grid.ColumnSpan="2"
                           BackgroundColor="{StaticResource Gray200}"
-                          Padding="0">
+                          Padding="10">
                         <VerticalStackLayout Padding="6,2">
                             <Label Text="Exam 1 - Exam 2"
                                    FontAttributes="Bold"
@@ -643,7 +644,7 @@
                 </Grid>
                 <!--right grid-->
                 <Grid Grid.Column="1"
-                      RowDefinitions="18, 396, 232"
+                      RowDefinitions="18, 396, 262"
                       ColumnSpacing="4"
                       RowSpacing="2"
                       ColumnDefinitions="*, 140">
@@ -898,7 +899,7 @@
                     <Grid Grid.Column="0"
                           Grid.Row="2"
                           BackgroundColor="{StaticResource Gray200}"
-                          Padding="0">
+                          Padding="10">
                         <VerticalStackLayout Padding="4,2">
                             <Label Text="Ring Summaries"
                                    HeightRequest="12"
@@ -1190,7 +1191,7 @@
                     </Grid>
                 </Grid>
             </Grid>
-        </ScrollView>
+        
         <popups:ImportPopup Grid.Row="1"
                             BindingContext="{Binding ImportPopupViewModel,Mode=OneWay}"
                             IsVisible="{Binding BindingContext.CanShowImportPopup,Source={x:Reference ThisControl}}" />
