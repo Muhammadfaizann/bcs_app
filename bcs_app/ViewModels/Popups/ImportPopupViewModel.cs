@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using IronPython.Runtime.Operations;
 using System.Collections.ObjectModel;
+using System.Text.RegularExpressions;
 
 namespace Bilateral_Corneal_Symmetry_3D_Analyzer.ViewModels;
 public partial class ImportPopupViewModel : ObservableObject
@@ -62,7 +63,7 @@ public partial class ImportPopupViewModel : ObservableObject
 
         DataFolderPath = result.Folder.Path;
 
-        //await Load();
+        await Load();
     }
     [RelayCommand]
     async Task Load()
@@ -81,9 +82,21 @@ public partial class ImportPopupViewModel : ObservableObject
         }
 
         var listOfPatients = new List<Patient>();
+
+        // Add this line to define the regex pattern for valid filenames
+        //var validFilenamePattern = new Regex(@"^[\w\s]+_\d+_[\w\s]+$");
+        var validFilenamePattern = new Regex(@"^\d+_[\w\s]+_\d+_\d+\.(csv|ele)$", RegexOptions.IgnoreCase);
+
+
+
         foreach (var dataFile in dataFiles)
         {
             var file = Path.GetFileNameWithoutExtension(dataFile);
+
+            // Check if the filename matches the expected pattern
+            if (!validFilenamePattern.IsMatch(file))
+                continue;
+
             var attributes = file.Split('_');
 
             if (listOfPatients.Any(i => i.Name == attributes[0]))
